@@ -1640,3 +1640,595 @@ DevTools listening on ws://127.0.0.1:53515/devtools/browser/afd0a395-c228-4dcf-b
 JavaScript warning: https://pagead2.googlesyndication.com/bg/M3JMhzk_3vTF8k0i77EsfxGITEmQ_9Y04x5PTEuqQvc.js line 2 > eval line 2667 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 1669045298201	Marionette	INFO	Stopped listening on port 37063
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1669055375319	geckodriver	INFO	Listening on 127.0.0.1:34753
+1669055375323	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "49503" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilepOmVhV"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669055375866	Marionette	INFO	Marionette enabled
+1669055375870	Marionette	INFO	Listening on port 37215
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 37215
+WebDriver BiDi listening on ws://127.0.0.1:49503
+1669055376036	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepOmVhV/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49503/devtools/browser/ac5d6bf2-4a2f-46b2-9de2-08914c73fd6a
+[Child 9974, MediaDecoderStateMachine #1] WARNING: Decoder=7fe1db317e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 9974, MediaDecoderStateMachine #1] WARNING: Decoder=7fe1dcb5e400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 9974, MediaDecoderStateMachine #1] WARNING: Decoder=7fe1dcb5e400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 9974, MediaDecoderStateMachine #1] WARNING: Decoder=7fe1db317e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 9974, MediaDecoderStateMachine #1] WARNING: Decoder=7fe1db317e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 9974, MediaDecoderStateMachine #1] WARNING: Decoder=7fe1db317e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 9974, MediaDecoderStateMachine #1] WARNING: Decoder=7fe1db317e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669055401976	Marionette	INFO	Stopped listening on port 37215
+1669055404592	geckodriver	INFO	Listening on 127.0.0.1:34133
+1669055404597	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47419" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileRNrY2A"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669055405186	Marionette	INFO	Marionette enabled
+1669055405191	Marionette	INFO	Listening on port 34359
+Read port: 34359
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:47419
+1669055405401	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileRNrY2A/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47419/devtools/browser/c14d9ac7-c1f8-4b8c-8ede-ad1437719042
+[Child 10374, MediaDecoderStateMachine #1] WARNING: Decoder=7f15271d6600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10374, MediaDecoderStateMachine #1] WARNING: Decoder=7f15271d5400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10374, MediaDecoderStateMachine #1] WARNING: Decoder=7f15271d5400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10374, MediaDecoderStateMachine #1] WARNING: Decoder=7f15271d5400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10374, MediaDecoderStateMachine #1] WARNING: Decoder=7f15271d5400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10374, MediaDecoderStateMachine #1] WARNING: Decoder=7f15271d5400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10374, MediaDecoderStateMachine #1] WARNING: Decoder=7f15271d5400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+JavaScript warning: , line 0: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1669055570960	Marionette	INFO	Stopped listening on port 34359
+1669055574998	geckodriver	INFO	Listening on 127.0.0.1:45147
+1669055575509	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "57051" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileujt7js"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669055576144	Marionette	INFO	Marionette enabled
+1669055576148	Marionette	INFO	Listening on port 45509
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 45509
+WebDriver BiDi listening on ws://127.0.0.1:57051
+1669055576296	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileujt7js/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57051/devtools/browser/d27311a9-575e-41c8-b0b5-2b795c2afc5d
+[Child 10799, MediaDecoderStateMachine #1] WARNING: Decoder=7f4ca6531a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10799, MediaDecoderStateMachine #1] WARNING: Decoder=7f4ca877b600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10799, MediaDecoderStateMachine #1] WARNING: Decoder=7f4ca877b600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10799, MediaDecoderStateMachine #1] WARNING: Decoder=7f4ca6531a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10799, MediaDecoderStateMachine #1] WARNING: Decoder=7f4ca6531a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10799, MediaDecoderStateMachine #1] WARNING: Decoder=7f4ca6531a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 10799, MediaDecoderStateMachine #1] WARNING: Decoder=7f4ca6531a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669055607951	geckodriver	INFO	Listening on 127.0.0.1:54817
+1669055607955	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "49037" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileR11iyr"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669055608496	Marionette	INFO	Marionette enabled
+1669055608500	Marionette	INFO	Listening on port 36285
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 36285
+WebDriver BiDi listening on ws://127.0.0.1:49037
+1669055608659	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileR11iyr/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49037/devtools/browser/8068b3be-618a-4ef6-a65a-439c37711328
+[Child 11176, MediaDecoderStateMachine #1] WARNING: Decoder=7f4b582b5900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 11176, MediaDecoderStateMachine #1] WARNING: Decoder=7f4b57419700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 11176, MediaDecoderStateMachine #1] WARNING: Decoder=7f4b57419700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 11176, MediaDecoderStateMachine #1] WARNING: Decoder=7f4b57419400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 11176, MediaDecoderStateMachine #1] WARNING: Decoder=7f4b57419400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+1669055614400	Marionette	INFO	Stopped listening on port 36285
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 717: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1669055626643	Marionette	INFO	Stopped listening on port 45509
+1669055879185	geckodriver	INFO	Listening on 127.0.0.1:48049
+1669055879188	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "45215" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejk8gMH"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669055879738	Marionette	INFO	Marionette enabled
+1669055879742	Marionette	INFO	Listening on port 43623
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 43623
+WebDriver BiDi listening on ws://127.0.0.1:45215
+1669055879888	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejk8gMH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:45215/devtools/browser/5376bdcf-1f6e-4a8c-84b6-8a15b1db92e4
+JavaScript warning: https://pagead2.googlesyndication.com/bg/M3JMhzk_3vTF8k0i77EsfxGITEmQ_9Y04x5PTEuqQvc.js line 2 > eval line 4486 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e278b5700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e27424100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e27424100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e28240300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e28240300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e278b5700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e278b5700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e2803d300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e2803d300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23ee7a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23ee7a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23ee7a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23ee7a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23ee7a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23ee7a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23a8d400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23a8d400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23a8d400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23a8d400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e27983100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e27983100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23b07d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e23b07d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e29bb8700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e29bb8700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e22de5700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e22de5700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e22de5700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e22de5700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e22de5700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 12428, MediaDecoderStateMachine #1] WARNING: Decoder=7f9e22de5700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669055925693	Marionette	INFO	Stopped listening on port 43623
+1669063407810	geckodriver	INFO	Listening on 127.0.0.1:55281
+1669063407814	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "36567" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileM71B6u"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669063408414	Marionette	INFO	Marionette enabled
+1669063408418	Marionette	INFO	Listening on port 35403
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 35403
+WebDriver BiDi listening on ws://127.0.0.1:36567
+1669063408590	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileM71B6u/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:36567/devtools/browser/008f75c5-2a3b-4661-b1c5-441ddad09a73
+JavaScript warning: https://pagead2.googlesyndication.com/bg/M3JMhzk_3vTF8k0i77EsfxGITEmQ_9Y04x5PTEuqQvc.js line 2 > eval line 3131 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Child 19524, MediaDecoderStateMachine #1] WARNING: Decoder=7ff52136fc00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19524, MediaDecoderStateMachine #1] WARNING: Decoder=7ff522316000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19524, MediaDecoderStateMachine #1] WARNING: Decoder=7ff52136fc00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19524, MediaDecoderStateMachine #1] WARNING: Decoder=7ff52136fc00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19524, MediaDecoderStateMachine #1] WARNING: Decoder=7ff522f22d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19524, MediaDecoderStateMachine #1] WARNING: Decoder=7ff522f22d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669063537996	geckodriver	INFO	Listening on 127.0.0.1:45811
+1669063538000	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56311" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile8Mq1sX"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669063538564	Marionette	INFO	Marionette enabled
+1669063538568	Marionette	INFO	Listening on port 39557
+Read port: 39557
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:56311
+1669063538712	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8Mq1sX/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56311/devtools/browser/a2607d30-1266-4dcc-a48a-13b5a7dce9e2
+1669063543463	Marionette	INFO	Stopped listening on port 35403
+JavaScript warning: https://pagead2.googlesyndication.com/bg/M3JMhzk_3vTF8k0i77EsfxGITEmQ_9Y04x5PTEuqQvc.js line 2 > eval line 6638 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Child 19964, MediaDecoderStateMachine #1] WARNING: Decoder=7f27b5a55300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19964, MediaDecoderStateMachine #1] WARNING: Decoder=7f27b5a34100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19964, MediaDecoderStateMachine #1] WARNING: Decoder=7f27b5a34100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19964, MediaDecoderStateMachine #1] WARNING: Decoder=7f27b5ce8100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19964, MediaDecoderStateMachine #1] WARNING: Decoder=7f27b5ce8100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19964, MediaDecoderStateMachine #1] WARNING: Decoder=7f27b5ce8100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 19964, MediaDecoderStateMachine #1] WARNING: Decoder=7f27b5ce8100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669063602213	geckodriver	INFO	Listening on 127.0.0.1:41205
+1669063602217	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "52041" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileqzFSh0"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669063602766	Marionette	INFO	Marionette enabled
+1669063602770	Marionette	INFO	Listening on port 45033
+Read port: 45033
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:52041
+1669063602921	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileqzFSh0/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52041/devtools/browser/e94b940b-ea6c-45c8-a107-cb8e10f24d8e
+JavaScript warning: https://pagead2.googlesyndication.com/bg/M3JMhzk_3vTF8k0i77EsfxGITEmQ_9Y04x5PTEuqQvc.js line 2 > eval line 6685 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2f2cdf500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2f2cdf500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2f2cdf500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2f2ce0100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2f2ce0100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2f369fd00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2f369fd00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95aa00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95aa00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95d700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95d700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95aa00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95aa00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95aa00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95aa00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef7f7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef7f7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef7f7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef7f7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef7f7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef7f7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef7f7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef7f7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ea60d500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ea60d500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ea60c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ea60c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ea60c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ea60c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ea60c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ea60c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2f17c5100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2f17c5100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2fcd1b500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2fcd1b500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95a700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95a700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95a700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 20376, MediaDecoderStateMachine #1] WARNING: Decoder=7fa2ef95a700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669063650032	Marionette	INFO	Stopped listening on port 45033
+1669063673905	Marionette	INFO	Stopped listening on port 39557
+1669063778590	geckodriver	INFO	Listening on 127.0.0.1:54723
+1669063778594	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48169" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilegCz4Rb"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669063779165	Marionette	INFO	Marionette enabled
+1669063779170	Marionette	INFO	Listening on port 34965
+Read port: 34965
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:48169
+1669063779350	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegCz4Rb/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:48169/devtools/browser/d7d9fa92-6b43-467e-83fb-bfb479c5fe6f
+JavaScript warning: https://pagead2.googlesyndication.com/bg/M3JMhzk_3vTF8k0i77EsfxGITEmQ_9Y04x5PTEuqQvc.js line 2 > eval line 4013 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1669063935560	geckodriver	INFO	Listening on 127.0.0.1:44469
+1669063935564	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33025" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilepFMOGD"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669063936109	Marionette	INFO	Marionette enabled
+1669063936113	Marionette	INFO	Listening on port 45141
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 45141
+WebDriver BiDi listening on ws://127.0.0.1:33025
+1669063936265	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepFMOGD/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:33025/devtools/browser/4efe6f7a-487e-49e7-8b49-3f3316714247
+1669063939257	Marionette	INFO	Stopped listening on port 34965
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/M3JMhzk_3vTF8k0i77EsfxGITEmQ_9Y04x5PTEuqQvc.js line 2 > eval line 5670 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c34664100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c34665600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c34665600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c34665300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c34665300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c34665300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c34665300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3a4ed100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3a4ed100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c36d53d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c36d53d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3a4ed100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3a4ed100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c364a7800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c364a7800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c35035b00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c35035b00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c35016700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c35016700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c364bdb00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c364bdb00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c35033d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c35033d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c39308700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c39308700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3441bd00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3441bd00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c34bf3100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c34bf3100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3441bd00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3441bd00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3231cf00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3231cf00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3231b100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3231b100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3231b100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3231b100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3231cf00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21261, MediaDecoderStateMachine #1] WARNING: Decoder=7f2c3231cf00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669063984861	Marionette	INFO	Stopped listening on port 45141
+1669064185604	geckodriver	INFO	Listening on 127.0.0.1:42873
+1669064185607	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "41697" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilezZEy9C"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669064186163	Marionette	INFO	Marionette enabled
+1669064186167	Marionette	INFO	Listening on port 38595
+Read port: 38595
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:41697
+1669064186303	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilezZEy9C/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:41697/devtools/browser/7f5f24f0-88e2-44c0-ac44-f77940d0d138
+JavaScript warning: https://pagead2.googlesyndication.com/bg/M3JMhzk_3vTF8k0i77EsfxGITEmQ_9Y04x5PTEuqQvc.js line 2 > eval line 5620 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e4167de00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e41244600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e41244600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e41243100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e41243100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e42e2aa00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e42e2aa00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3e937d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3e937d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3e937100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3e937100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3e937400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3e937400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3eb34500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3eb34500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3f690400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3f690400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3f692b00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3f692b00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3f690400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3f690400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3f690400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3f690400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3a30fb00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3a30fb00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3a30e000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3a30e000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e438d9d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e438d9d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3a30ec00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3a30ec00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3cc17200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3cc17200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3cc17500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3cc17500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3c12ed00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3c12ed00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3c12ed00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 21793, MediaDecoderStateMachine #1] WARNING: Decoder=7f6e3c12ed00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669064233469	Marionette	INFO	Stopped listening on port 38595
+1669064387576	geckodriver	INFO	Listening on 127.0.0.1:60945
+1669064387579	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "57889" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileR4ulw7"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669064388123	Marionette	INFO	Marionette enabled
+1669064388127	Marionette	INFO	Listening on port 46795
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 46795
+WebDriver BiDi listening on ws://127.0.0.1:57889
+1669064388265	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileR4ulw7/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57889/devtools/browser/ffc5c1bb-f320-4263-a9a9-3d6db53dbea0
+JavaScript warning: https://pagead2.googlesyndication.com/bg/M3JMhzk_3vTF8k0i77EsfxGITEmQ_9Y04x5PTEuqQvc.js line 2 > eval line 3780 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1669064443673	Marionette	INFO	Stopped listening on port 46795
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669064649169	geckodriver	INFO	Listening on 127.0.0.1:50673
+1669064649173	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48219" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiley4rKSL"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669064649752	Marionette	INFO	Marionette enabled
+1669064649756	Marionette	INFO	Listening on port 33245
+Read port: 33245
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:48219
+1669064649904	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiley4rKSL/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:48219/devtools/browser/c3a5859e-5637-4a6a-b320-6b6ea0b69b05
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02fc9be400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f6b57200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f69fe400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f0e40a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f33cc700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f13fc800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f725ed00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02ec82a600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02ec82af00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02ef2d2d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f6b91900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02ec538700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f6b0b100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02efc9d100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f6b90d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02ebe3fd00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02ef293a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02ef294900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02ef299200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02ef294600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669064696547	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'loading'.
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02efc36000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02e63e9a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02e63ea000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02f38aaa00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+1669064698580	Marionette	INFO	Stopped listening on port 33245
+[Child 23695, MediaDecoderStateMachine #1] WARNING: Decoder=7f02e737a600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+1669064713356	geckodriver	INFO	Listening on 127.0.0.1:60405
+1669064713360	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "44745" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileF0HfNq"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669064713903	Marionette	INFO	Marionette enabled
+1669064713907	Marionette	INFO	Listening on port 41471
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 41471
+WebDriver BiDi listening on ws://127.0.0.1:44745
+1669064714055	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileF0HfNq/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:44745/devtools/browser/f0a6dab6-92c4-497d-920a-dbee31229839
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1669064768744	geckodriver	INFO	Listening on 127.0.0.1:33085
+1669064768748	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47115" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile9CyjLm"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669064769298	Marionette	INFO	Marionette enabled
+1669064769302	Marionette	INFO	Listening on port 43913
+Read port: 43913
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:47115
+1669064769454	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9CyjLm/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47115/devtools/browser/99329d64-9ced-41ae-8cae-7dfad71606c5
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8350aa3d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f835218c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8350a2ae00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8350a2ae00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8350aa3d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8350aa3d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8351cba300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8351cba300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8352399600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8352399600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f835211e100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f835211e100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8352054800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8352054800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8352054800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8352054800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8352399600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8352399600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f835438e900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f835438e900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f835438e900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f835438e900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f835438e900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f835438e900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8351cbb500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8351cbb500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834f6b7900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834f6b7900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834f6b6400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834f6b6400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834e7f9e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834e7f9e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834e7f9e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834e7f9e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834e7f9e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834e7f9e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834f6b6400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834f6b6400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8355041e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f8355041e00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834b8a0c00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834b8a0c00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834b89f700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834b89f700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834b89f700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834b89f700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834b8a1200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 24469, MediaDecoderStateMachine #1] WARNING: Decoder=7f834b8a1200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-28c9a4e3b5755443.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669064809538	Marionette	INFO	Stopped listening on port 43913
+1669064851240	geckodriver	INFO	Listening on 127.0.0.1:33687
+1669064851244	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56493" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileXHHL7i"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669064851790	Marionette	INFO	Marionette enabled
+1669064851794	Marionette	INFO	Listening on port 37801
+Read port: 37801
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:56493
+1669064851957	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXHHL7i/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56493/devtools/browser/bb4865c0-cc77-4048-befc-d30fdad256e3
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc2a945000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc2a37e100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc2a37e100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc2a3e7c00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc2a3e7c00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc29004100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc29004100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc26496a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc26496a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc26497900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc26497900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc26497900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc26497900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc253f5d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc253f5d00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc25316900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc25316900 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc29007a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc29007a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc25317200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc25317200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc2e94ad00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc2e94ad00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc24f1c700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc24f1c700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc24f1c100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc24f1c100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc2ba55100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc2ba55100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc212b8300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc212b8300 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc212b7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc212b7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc212b7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc212b7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc212b7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 25048, MediaDecoderStateMachine #1] WARNING: Decoder=7fbc212b7400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-oSlIJY/firefox-107.0+build2/dom/media/MediaDecoderStateMachineBase.cpp:151
+1669064888585	Marionette	INFO	Stopped listening on port 37801
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
