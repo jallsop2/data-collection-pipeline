@@ -64,6 +64,8 @@ class scraper():
         return link_list
 
     def next_page(self,driver):
+        delay = 10
+        WebDriverWait(driver, delay).until(EC.element_to_be_clickable((By.XPATH, '//a[@class="lister-page-next next-page"]')))
         next_button = driver.find_element(by=By.XPATH, value='//a[@class="lister-page-next next-page"]')
         next_button.click()
 
