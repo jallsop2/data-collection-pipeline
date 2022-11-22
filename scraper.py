@@ -5,11 +5,17 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from time import sleep
 from datetime import date
+import os 
+import json 
+import requests
 
 
 
 class scraper():
     def __init__(self):
+
+        if not os.path.isdir("raw_data"):
+            os.makedirs("raw_data")
         
         self.film_dicts = {}
 
@@ -18,19 +24,20 @@ class scraper():
         driver.get(URL)
 
         self.link_list = []
-        for i in range(5):
+        for i in range(2):
             self.link_list.extend(self.get_page_links(driver))
             sleep(0.5)
             self.next_page(driver)
 
-        for link in self.link_list[:5]:
+        for link in self.link_list[:3]:
             driver.get(link)
             sleep(0.5)
             self.remove_review_box(driver)
             self.get_info(driver)
+            #self.get_images(driver)
 
-        print(self.film_dicts)
-        
+        #print(self.film_dicts)
+
         driver.quit()
 
     def accept_cookies(self,driver):
@@ -104,6 +111,10 @@ class scraper():
         delay = 10
         WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')))
 
+        current_url = driver.current_url
+        film_id = current_url.split('/')[4]
+        film_info['IMDb Id'] = film_id
+
         top_info_container_left = driver.find_element(By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')
 
         film_name = top_info_container_left.find_element(by=By.XPATH, value='.//h1[@data-testid="hero-title-block__title"]').text
@@ -133,13 +144,80 @@ class scraper():
         film_info['Date Scraped'] = str(date.today())
 
         poster_container = driver.find_element(By.XPATH, '//div[@data-testid="hero-media__poster--inline-video"]')
-        film_info['Poster Image'] = poster_container.find_element(By.XPATH, './/img[@class="ipc-image"]').get_attribute('src')
+        poster_url = poster_container.find_element(By.XPATH, './/img[@class="ipc-image"]').get_attribute('src')
+        poster_data = requests.get(poster_url).content
+        
 
-        current_url = driver.current_url
-        film_id = current_url.split('/')[4]
+        if not os.path.isdir("raw_data/"+film_id):
+            os.makedirs("raw_data/"+film_id)
+
+        with open(f'raw_data/{film_id}/poster_{film_id}.jpg', 'wb') as file:
+            file.write(poster_data)
+
         film_info['IMDb Webpage'] = 'https://www.imdb.com/title/' + film_id
 
         self.film_dicts[film_id] = film_info
+
+        
+
+        json_film_info =json.dumps(film_info,indent=4)
+        with open(f'raw_data/{film_id}/data.json','w') as file:
+            file.write(json_film_info)
+
+    def get_images(self,driver):
+
+        date_list = str(date.today()).split('-')
+        date_str = ''
+        for i in date_list:
+            date_str += i
+
+
+        current_url = driver.current_url
+        film_id = current_url.split('/')[4]
+
+        if not os.path.isdir("raw_data/"+film_id):
+            os.makedirs("raw_data/"+film_id)
+
+        if not os.path.isdir("raw_data/"+film_id+'/images'):
+            os.makedirs("raw_data/"+film_id+'/images')
+
+        driver.get('https://www.imdb.com/title/'+film_id+'/mediaindex')
+
+        sleep(0.5)
+
+        image_page_span = driver.find_element(By.XPATH, '//span[@class="page_list"]')
+        image_page_list = image_page_span.find_elements(By.XPATH, './a')
+        num_image_pages = len(image_page_list)+1
+
+        counter = 1
+
+        #for i in range(1,num_image_pages+1):
+        for i in range(1,min(3,num_image_pages)):
+            delay = 3
+            driver.get(f'https://www.imdb.com/title/{film_id}/mediaindex?page={i}')
+
+            sleep(0.5)
+
+            WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="media_index_thumb_list"]')))
+            thumnail_grid = driver.find_element(By.XPATH, '//div[@class="media_index_thumb_list"]')
+            image_list = thumnail_grid.find_elements(By.XPATH,'./a')
+
+            for image in image_list[:10]:
+
+                image_src = image.find_element(By.XPATH, './img').get_attribute('src')
+                image_data = requests.get(image_src).content
+                image_name = f'{date_str}_{film_id}_{counter}.jpg'
+
+                with open(f'raw_data/{film_id}/images/{image_name}', 'wb') as file:
+                    file.write(image_data)
+
+                counter += 1
+
+
+
+        
+        
+
 
 
 
