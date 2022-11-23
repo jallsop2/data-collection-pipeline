@@ -12,58 +12,58 @@ import requests
 
 
 class scraper():
+    """
+    The webscraper used to maneuver through a website and scrape data from it.
+
+    Attributes:
+        film.dicts (dict): A dictionary pairing the film ids with the dictionary of data collected..
+        page_link_list (list): A list of the links to the webpages the data is gotten from.
+    """
     def __init__(self):
+        """
+        Initialises the attributes and creates the folder for the data to go in.
+        """
 
         if not os.path.isdir("raw_data"):
             os.makedirs("raw_data")
-        
+
         self.film_dicts = {}
+        self.page_link_list = []
 
-        driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox()
         URL = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
-        driver.get(URL)
+        self.driver.get(URL)
 
-        self.link_list = []
-        for i in range(2):
-            self.link_list.extend(self.get_page_links(driver))
-            sleep(0.5)
-            self.next_page(driver)
 
-        for link in self.link_list[:3]:
-            driver.get(link)
-            sleep(0.5)
-            self.remove_review_box(driver)
-            self.get_info(driver)
-            #self.get_images(driver)
-
-        #print(self.film_dicts)
-
-        driver.quit()
-
-    def accept_cookies(self,driver):
+    def accept_cookies(self):
+        """
+        Accepts the cookies if the website prompts it.
+        """
         
         delay = 10
         sleep(1) 
 
-        try:   # If you have the latest version of Selenium, the code above won't run because the "switch_to_frame" is deprecated
-            WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//*[@id="gdpr-consent-notice"]')))
-            driver.switch_to.frame('gdpr-consent-notice') # This is the id of the frame
-            accept_cookies_button = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//*[@id="save"]')))
-            accept_cookies_button = driver.find_element(by=By.XPATH, value='//*[@id="save"]')
+        try: 
+            WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//*[@id="gdpr-consent-notice"]')))
+            self.driver.switch_to.frame('gdpr-consent-notice')
+            accept_cookies_button = WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//*[@id="save"]')))
+            accept_cookies_button = self.driver.find_element(by=By.XPATH, value='//*[@id="save"]')
             accept_cookies_button.click()
-            driver.switch_to.default_content()
+            self.driver.switch_to.default_content()
 
         except:
-            pass # If there is no cookies button, we won't find it, so we can pass
+            pass
 
-        return driver
 
-    def get_page_links(self,driver):
+    def get_page_links(self):
+        """
+        Returns a list of links for the webpae of each of the film on this page.
+        """
 
         delay = 10
 
-        WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="lister-item-content"]')))
-        film_container = driver.find_element(by=By.XPATH, value='//div[@class="lister-list"]')
+        WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="lister-item-content"]')))
+        film_container = self.driver.find_element(by=By.XPATH, value='//div[@class="lister-list"]')
         film_list = film_container.find_elements(by=By.XPATH, value='./div')
         link_list = []
 
@@ -79,43 +79,52 @@ class scraper():
 
         return link_list
 
-    def next_page(self,driver):
+    def next_page(self):
+        """
+        Clicks the next page button.
+        """
         delay = 10
-        WebDriverWait(driver, delay).until(EC.element_to_be_clickable((By.XPATH, '//a[@class="lister-page-next next-page"]')))
+        WebDriverWait(self.driver, delay).until(EC.element_to_be_clickable((By.XPATH, '//a[@class="lister-page-next next-page"]')))
 
         for i in range(5):
             try:
-                next_button = driver.find_element(by=By.XPATH, value='//a[@class="lister-page-next next-page"]')
+                next_button = self.driver.find_element(by=By.XPATH, value='//a[@class="lister-page-next next-page"]')
                 next_button.click()
                 return
             except:
                 sleep(0.5)
                 print(i)
         
-        next_button = driver.find_element(by=By.XPATH, value='//a[@class="lister-page-next next-page"]')
+        next_button = self.driver.find_element(by=By.XPATH, value='//a[@class="lister-page-next next-page"]')
         next_button.click()
 
-    def remove_review_box(self,driver):
+    def remove_review_box(self):
+        """
+        Closes the prompt to review the film if it appears.
+        """
         
         try:
-            review_prompt = driver.find_element(By.XPATH, '//div[@class="ipc-promptable-base ipc-promptable-dialog ipc-rating-prompt enter-done"]')
+            review_prompt = self.driver.find_element(By.XPATH, '//div[@class="ipc-promptable-base ipc-promptable-dialog ipc-rating-prompt enter-done"]')
             close_button = review_prompt.find_element(By.XPATH, './/button[@title="Close Prompt"]')
             close_button.click()
         
         except:
             pass
 
-    def get_info(self,driver):
+    def get_info(self):
+        """
+        Scrapes the films information off the current webpage into a dictionary and adds this the film_dicts attribute.
+        """
 
         film_info = {}
         delay = 10
-        WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')))
+        WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')))
 
-        current_url = driver.current_url
+        current_url = self.driver.current_url
         film_id = current_url.split('/')[4]
         film_info['IMDb Id'] = film_id
 
-        top_info_container_left = driver.find_element(By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')
+        top_info_container_left = self.driver.find_element(By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')
 
         film_name = top_info_container_left.find_element(by=By.XPATH, value='.//h1[@data-testid="hero-title-block__title"]').text
         film_info['Name'] = film_name
@@ -125,46 +134,59 @@ class scraper():
         film_info['Age Rating'] = top_info_list[1].find_element(by=By.XPATH, value='.//a').text
         film_info['Length'] = top_info_list[2].text
 
-        top_info_container_right = driver.find_element(By.XPATH, '//div[@class="sc-db8c1937-0 eGmDjE sc-80d4314-3 iBtAhY"]')
+        top_info_container_right = self.driver.find_element(By.XPATH, '//div[@class="sc-db8c1937-0 eGmDjE sc-80d4314-3 iBtAhY"]')
         film_info['IMDb Rating'] = top_info_container_right.find_element(By.XPATH, './/span[@class="sc-7ab21ed2-1 jGRxWM"]').text
 
-        secondary_container = driver.find_element(By.XPATH, '//div[@class="sc-7643a8e3-10 itwFpV"]')
+        secondary_container = self.driver.find_element(By.XPATH, '//div[@class="sc-7643a8e3-10 itwFpV"]')
         director_info = secondary_container.find_element(By.XPATH, './/li[@data-testid="title-pc-principal-credit"]')
         film_info['Director'] = director_info.find_element(By.XPATH, './/a').text
         
-        details_section = driver.find_element(By.XPATH, '//section[@data-testid="Details"]')
+        details_section = self.driver.find_element(By.XPATH, '//section[@data-testid="Details"]')
         country_section = details_section.find_element(By.XPATH, './/li[@data-testid="title-details-origin"]')
         film_info['Country of Origin'] = country_section.find_element(By.XPATH, './/a').text
 
-        box_office_section = driver.find_element(By.XPATH, '//div[@data-testid="title-boxoffice-section"]')
+        box_office_section = self.driver.find_element(By.XPATH, '//div[@data-testid="title-boxoffice-section"]')
         box_office_detail_list = box_office_section.find_elements(By.XPATH, './ul/li')
         film_info['Budget'] = box_office_detail_list[0].find_element(By.XPATH, './/label').text.split(' ')[0]
         film_info['Gross Profit'] = box_office_detail_list[3].find_element(By.XPATH, './/label').text
 
+        poster_container = self.driver.find_element(By.XPATH, '//div[@data-testid="hero-media__poster--inline-video"]')
+        film_info['Poster Url'] = poster_container.find_element(By.XPATH, './/img[@class="ipc-image"]').get_attribute('src')
+
         film_info['Date Scraped'] = str(date.today())
-
-        poster_container = driver.find_element(By.XPATH, '//div[@data-testid="hero-media__poster--inline-video"]')
-        poster_url = poster_container.find_element(By.XPATH, './/img[@class="ipc-image"]').get_attribute('src')
-        poster_data = requests.get(poster_url).content
-        
-
-        if not os.path.isdir("raw_data/"+film_id):
-            os.makedirs("raw_data/"+film_id)
-
-        with open(f'raw_data/{film_id}/poster_{film_id}.jpg', 'wb') as file:
-            file.write(poster_data)
 
         film_info['IMDb Webpage'] = 'https://www.imdb.com/title/' + film_id
 
         self.film_dicts[film_id] = film_info
 
+
+    def save_to_file(self):
+        """
+        Creates and saves the data in the film_dicts attribute to json files matching the film id.
+        """
+
+        for film_id, film_info in self.film_dicts:
+
+            if not os.path.isdir("raw_data/"+film_id):
+                os.makedirs("raw_data/"+film_id)
+
+            poster_data = requests.get(film_info['Poster Url']).content
+            with open(f'raw_data/{film_id}/poster_{film_id}.jpg', 'wb') as file:
+                file.write(poster_data)
         
 
-        json_film_info =json.dumps(film_info,indent=4)
-        with open(f'raw_data/{film_id}/data.json','w') as file:
-            file.write(json_film_info)
+            json_film_info =json.dumps(film_info,indent=4)
+            with open(f'raw_data/{film_id}/data.json','w') as file:
+                file.write(json_film_info)
 
-    def get_images(self,driver):
+
+
+
+    def get_images(self):
+
+        """
+        Locates the page containing the additional images for the current webpage, and saves them in the folder corrosponding to the film.
+        """
 
         date_list = str(date.today()).split('-')
         date_str = ''
@@ -172,7 +194,7 @@ class scraper():
             date_str += i
 
 
-        current_url = driver.current_url
+        current_url = self.driver.current_url
         film_id = current_url.split('/')[4]
 
         if not os.path.isdir("raw_data/"+film_id):
@@ -181,11 +203,11 @@ class scraper():
         if not os.path.isdir("raw_data/"+film_id+'/images'):
             os.makedirs("raw_data/"+film_id+'/images')
 
-        driver.get('https://www.imdb.com/title/'+film_id+'/mediaindex')
+        self.driver.get('https://www.imdb.com/title/'+film_id+'/mediaindex')
 
         sleep(0.5)
 
-        image_page_span = driver.find_element(By.XPATH, '//span[@class="page_list"]')
+        image_page_span = self.driver.find_element(By.XPATH, '//span[@class="page_list"]')
         image_page_list = image_page_span.find_elements(By.XPATH, './a')
         num_image_pages = len(image_page_list)+1
 
@@ -194,12 +216,12 @@ class scraper():
         #for i in range(1,num_image_pages+1):
         for i in range(1,min(3,num_image_pages)):
             delay = 3
-            driver.get(f'https://www.imdb.com/title/{film_id}/mediaindex?page={i}')
+            self.driver.get(f'https://www.imdb.com/title/{film_id}/mediaindex?page={i}')
 
             sleep(0.5)
 
-            WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="media_index_thumb_list"]')))
-            thumnail_grid = driver.find_element(By.XPATH, '//div[@class="media_index_thumb_list"]')
+            WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="media_index_thumb_list"]')))
+            thumnail_grid = self.driver.find_element(By.XPATH, '//div[@class="media_index_thumb_list"]')
             image_list = thumnail_grid.find_elements(By.XPATH,'./a')
 
             for image in image_list[:10]:
@@ -215,16 +237,24 @@ class scraper():
 
 
 
-        
-        
-
-
-
-
-        
-
-
-
 if __name__ == '__main__':
     imdb_scraper = scraper()
+    
+    for i in range(2):
+        imdb_scraper.page_link_list.extend(imdb_scraper.get_page_links())
+        sleep(0.5)
+        imdb_scraper.next_page()
+
+    for link in imdb_scraper.page_link_list[:3]:
+        get(link)
+        sleep(0.5)
+        imdb_scraper.remove_review_box()
+        imdb_scraper.get_info()
+        #imdb_scraper.get_images()
+
+    imdb_scraper.save_to_file()
+
+    #print(imdb_scraper.film_dicts)
+
+    imdb_scraper.driver.quit()
 
