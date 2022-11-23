@@ -76,3 +76,123 @@ class scraper():
         pass
 
 ```
+
+# Milestone 4
+
+The task for this milestone was to collect the product data from each website, and save to separate json file.
+
+To do this I created a new method which goes to the links scraped from the previous milestone, and takes the neccessary data from them, including the image source for the film poster. This is then saved as a dictionary, which can be converted to a json object using the json library, and saved to a separate json file. The file was created in a separate folder for each film, which were created programatically using the os library a
+
+Each film also has a library of hundreds photos with it, so I also created a method to scrape these images and save them in an images folder within the specific film folders, although each film has hundreds of photots, so it would be very inefficient to store them all.
+
+
+```python
+def get_info(self,driver):
+
+    film_info = {}
+    delay = 10
+    WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')))
+
+    current_url = driver.current_url
+    film_id = current_url.split('/')[4]
+    film_info['IMDb Id'] = film_id
+
+    top_info_container_left = driver.find_element(By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')
+
+    film_name = top_info_container_left.find_element(by=By.XPATH, value='.//h1[@data-testid="hero-title-block__title"]').text
+    film_info['Name'] = film_name
+
+    top_info_list = top_info_container_left.find_elements(by=By.XPATH, value='.//li[@class="ipc-inline-list__item"]')
+    film_info['Year Released'] = top_info_list[0].find_element(by=By.XPATH, value='.//a').text
+    film_info['Age Rating'] = top_info_list[1].find_element(by=By.XPATH, value='.//a').text
+    film_info['Length'] = top_info_list[2].text
+
+    top_info_container_right = driver.find_element(By.XPATH, '//div[@class="sc-db8c1937-0 eGmDjE sc-80d4314-3 iBtAhY"]')
+    film_info['IMDb Rating'] = top_info_container_right.find_element(By.XPATH, './/span[@class="sc-7ab21ed2-1 jGRxWM"]').text
+
+    secondary_container = driver.find_element(By.XPATH, '//div[@class="sc-7643a8e3-10 itwFpV"]')
+    director_info = secondary_container.find_element(By.XPATH, './/li[@data-testid="title-pc-principal-credit"]')
+    film_info['Director'] = director_info.find_element(By.XPATH, './/a').text
+    
+    details_section = driver.find_element(By.XPATH, '//section[@data-testid="Details"]')
+    country_section = details_section.find_element(By.XPATH, './/li[@data-testid="title-details-origin"]')
+    film_info['Country of Origin'] = country_section.find_element(By.XPATH, './/a').text
+
+    box_office_section = driver.find_element(By.XPATH, '//div[@data-testid="title-boxoffice-section"]')
+    box_office_detail_list = box_office_section.find_elements(By.XPATH, './ul/li')
+    film_info['Budget'] = box_office_detail_list[0].find_element(By.XPATH, './/label').text.split(' ')[0]
+    film_info['Gross Profit'] = box_office_detail_list[3].find_element(By.XPATH, './/label').text
+
+    film_info['Date Scraped'] = str(date.today())
+
+    poster_container = driver.find_element(By.XPATH, '//div[@data-testid="hero-media__poster--inline-video"]')
+    poster_url = poster_container.find_element(By.XPATH, './/img[@class="ipc-image"]').get_attribute('src')
+    poster_data = requests.get(poster_url).content
+    
+
+    if not os.path.isdir("raw_data/"+film_id):
+        os.makedirs("raw_data/"+film_id)
+
+    with open(f'raw_data/{film_id}/poster_{film_id}.jpg', 'wb') as file:
+        file.write(poster_data)
+
+    film_info['IMDb Webpage'] = 'https://www.imdb.com/title/' + film_id
+
+    self.film_dicts[film_id] = film_info
+
+    
+
+    json_film_info =json.dumps(film_info,indent=4)
+    with open(f'raw_data/{film_id}/data.json','w') as file:
+        file.write(json_film_info)
+
+def get_images(self,driver):
+
+    date_list = str(date.today()).split('-')
+    date_str = ''
+    for i in date_list:
+        date_str += i
+
+
+    current_url = driver.current_url
+    film_id = current_url.split('/')[4]
+
+    if not os.path.isdir("raw_data/"+film_id):
+        os.makedirs("raw_data/"+film_id)
+
+    if not os.path.isdir("raw_data/"+film_id+'/images'):
+        os.makedirs("raw_data/"+film_id+'/images')
+
+    driver.get('https://www.imdb.com/title/'+film_id+'/mediaindex')
+
+    sleep(0.5)
+
+    image_page_span = driver.find_element(By.XPATH, '//span[@class="page_list"]')
+    image_page_list = image_page_span.find_elements(By.XPATH, './a')
+    num_image_pages = len(image_page_list)+1
+
+    counter = 1
+
+    #for i in range(1,num_image_pages+1):
+    for i in range(1,min(3,num_image_pages)):
+        delay = 3
+        driver.get(f'https://www.imdb.com/title/{film_id}/mediaindex?page={i}')
+
+        sleep(0.5)
+
+        WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="media_index_thumb_list"]')))
+        thumnail_grid = driver.find_element(By.XPATH, '//div[@class="media_index_thumb_list"]')
+        image_list = thumnail_grid.find_elements(By.XPATH,'./a')
+
+        for image in image_list[:10]:
+
+            image_src = image.find_element(By.XPATH, './img').get_attribute('src')
+            image_data = requests.get(image_src).content
+            image_name = f'{date_str}_{film_id}_{counter}.jpg'
+
+            with open(f'raw_data/{film_id}/images/{image_name}', 'wb') as file:
+                file.write(image_data)
+
+            counter += 1
+```
+
