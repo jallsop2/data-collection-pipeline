@@ -16,8 +16,8 @@ class scraper():
     The webscraper used to maneuver through a website and scrape data from it.
 
     Attributes:
-        film.dicts (dict): A dictionary pairing the film ids with the dictionary of data collected..
-        page_link_list (list): A list of the links to the webpages the data is gotten from.
+        film.dicts: A dictionary pairing the film ids with the dictionary of data collected..
+        page_link_list: A list of the links to the webpages the data is gotten from.
     """
     def __init__(self):
         """
@@ -160,6 +160,26 @@ class scraper():
         self.film_dicts[film_id] = film_info
 
 
+    def scrape_from_link_list(self,num_pages = -1):
+        """
+        Loops through the links in the page_link_list attribute and scrapes the film info in each one.
+
+        Args:
+            num_pages: An integer indicating how many films info to get. If not specified it gets the information for all of them.
+        """
+
+
+        if num_pages == -1:
+            num_pages = len(self.page_link_list)
+
+        for link in self.page_link_list[:num_pages]:
+            self.driver.get(link)
+            sleep(0.5)
+            self.remove_review_box()
+            self.get_info()
+            #imdb_scraper.get_images()
+
+
     def save_to_file(self):
         """
         Creates and saves the data in the film_dicts attribute to json files matching the film id.
@@ -245,12 +265,7 @@ if __name__ == '__main__':
         sleep(0.5)
         imdb_scraper.next_page()
 
-    for link in imdb_scraper.page_link_list[:3]:
-        get(link)
-        sleep(0.5)
-        imdb_scraper.remove_review_box()
-        imdb_scraper.get_info()
-        #imdb_scraper.get_images()
+    imdb_scraper.scrape_from_link_list(3)
 
     imdb_scraper.save_to_file()
 
