@@ -32,9 +32,10 @@ class scraper():
         self.film_image_data = {}
 
         self.driver = webdriver.Firefox()
-        URL = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
-        self.driver.get(URL)
 
+
+    def load_link(self, web_link):
+        self.driver.get(web_link)
 
     def accept_cookies(self):
         """
@@ -295,6 +296,9 @@ class scraper():
 
 if __name__ == '__main__':
     imdb_scraper = scraper()
+
+    URL = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
+    imdb_scraper.load_link(URL)
     
     for i in range(2):
         imdb_scraper.page_link_list.extend(imdb_scraper.get_page_links())

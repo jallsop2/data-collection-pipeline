@@ -2,14 +2,27 @@ from scraper import scraper
 import unittest
 from selenium import webdriver
 import json
+from time import sleep
 
 class ScraperTestCase(unittest.TestCase):
 
     def setUp(self):
         self.test_scraper = scraper()    
 
+    def test_next_page(self):
+        url = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
+        self.test_scraper.load_link(url)
+        sleep(2)
+        self.test_scraper.next_page()
+        sleep(5)
+        next_url = "https://www.imdb.com/search/keyword/?page=2&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&release_date=%2C2021&sort=moviemeter,asc"
+        current_url = self.test_scraper.driver.current_url
+        self.assertEqual(next_url,current_url)
 
     def test_get_page_links(self):
+        url = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
+        self.test_scraper.load_link(url)
+        sleep(2)
         output = self.test_scraper.get_page_links()
         self.assertIsInstance(output, list)
 
