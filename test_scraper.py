@@ -29,9 +29,8 @@ class ScraperTestCase(unittest.TestCase):
     def test_get_info(self):
         self.test_scraper.page_link_list = ['https://www.imdb.com/title/tt1825683']
         self.test_scraper.scrape_from_link_list()
-        #print(self.test_scraper.film_dicts.items())
+
         for film_id, film_dict in self.test_scraper.film_dicts.items():
-            #print(film_id, film_dict)
             self.assertIsInstance(film_dict, dict)
             self.assertEqual(film_id,film_dict['IMDb Id'])
 

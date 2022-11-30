@@ -1,12 +1,12 @@
+from datetime import date
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options
 from time import sleep
-from datetime import date
-import os 
 import json 
+import os 
 import requests
 
 
@@ -31,7 +31,10 @@ class scraper():
         self.page_link_list = []
         self.film_image_data = {}
 
-        self.driver = webdriver.Firefox()
+        options = Options()
+        options.add_argument("--headless")
+
+        self.driver = webdriver.Firefox(options=options)
 
 
     def load_link(self, web_link):
@@ -223,15 +226,12 @@ class scraper():
             num_images: an integer indicating the maximum number of images the user wants to scrape, if not specified then all images are scraped.
         """
 
-        
         image_dictionary = {}
 
         date_str = ''.join(str(date.today()).split('-'))
 
-
         current_url = self.driver.current_url
         film_id = current_url.split('/')[4]
-
 
         self.driver.get('https://www.imdb.com/title/'+film_id+'/mediaindex')
 
@@ -240,7 +240,6 @@ class scraper():
         image_page_span = self.driver.find_element(By.XPATH, '//span[@class="page_list"]')
         image_page_list = image_page_span.find_elements(By.XPATH, './a')
         num_image_pages = len(image_page_list)+1
-
 
         counter = 1
 
@@ -269,7 +268,6 @@ class scraper():
                 counter += 1
                 print(counter)
 
-        
         self.film_image_data[film_id] = image_dictionary
 
     def save_images_to_file(self):

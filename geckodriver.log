@@ -3955,3 +3955,335 @@ WebDriver BiDi listening on ws://127.0.0.1:52379
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile3RA0Lh/search.json.mozlz4", (void 0)))
 DevTools listening on ws://127.0.0.1:52379/devtools/browser/81dd5c6d-145f-4c34-ae85-61b177a63ab1
 1669818978954	Marionette	INFO	Stopped listening on port 46273
+1669820238117	geckodriver	INFO	Listening on 127.0.0.1:36983
+1669820238622	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "59843" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilerPISXE"
+*** You are running in headless mode.
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+1669820238929	Marionette	INFO	Marionette enabled
+1669820238933	Marionette	INFO	Listening on port 39935
+WebDriver BiDi listening on ws://127.0.0.1:59843
+Read port: 39935
+1669820239314	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilerPISXE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59843/devtools/browser/6b4f9c5e-b1bc-47a2-af1e-2cdef88b7008
+[Child 46234, MediaDecoderStateMachine #1] WARNING: Decoder=7fa3a3748f00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 46234, MediaDecoderStateMachine #1] WARNING: Decoder=7fa3a2bf0700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 46234, MediaDecoderStateMachine #1] WARNING: Decoder=7fa3a2bf0700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 46234, MediaDecoderStateMachine #1] WARNING: Decoder=7fa3a3818100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 46234, MediaDecoderStateMachine #1] WARNING: Decoder=7fa3a3818100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+1669820244442	Marionette	INFO	Stopped listening on port 39935
+!!! error running onStopped callback: TypeError: callback is not a function
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 717: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1669820244996	geckodriver	INFO	Listening on 127.0.0.1:54541
+1669820245503	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "47283" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletMzNw2"
+*** You are running in headless mode.
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+1669820245810	Marionette	INFO	Marionette enabled
+1669820245814	Marionette	INFO	Listening on port 34691
+WebDriver BiDi listening on ws://127.0.0.1:47283
+Read port: 34691
+1669820246196	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletMzNw2/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47283/devtools/browser/32e37fa2-818f-489e-8239-dbdcbf0ff7e4
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 6466 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1669820254496	Marionette	INFO	Stopped listening on port 34691
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 717: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1669820255074	geckodriver	INFO	Listening on 127.0.0.1:58579
+1669820255580	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "58061" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileqKLUBH"
+*** You are running in headless mode.
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+1669820255913	Marionette	INFO	Marionette enabled
+1669820255917	Marionette	INFO	Listening on port 42449
+WebDriver BiDi listening on ws://127.0.0.1:58061
+Read port: 42449
+1669820256171	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileqKLUBH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58061/devtools/browser/01cb14a7-82f0-4a9e-a0ae-2764e37ae94f
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 45 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1669820268342	Marionette	INFO	Stopped listening on port 42449
+1669820268853	geckodriver	INFO	Listening on 127.0.0.1:42785
+1669820269357	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "35725" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilese17Ec"
+*** You are running in headless mode.
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+1669820269691	Marionette	INFO	Marionette enabled
+1669820269695	Marionette	INFO	Listening on port 39805
+WebDriver BiDi listening on ws://127.0.0.1:35725
+Read port: 39805
+1669820269946	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilese17Ec/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:35725/devtools/browser/b0262541-0836-4b96-b693-45eb9d8fc025
+1669820271352	Marionette	INFO	Stopped listening on port 39805
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1669820826648	geckodriver	INFO	Listening on 127.0.0.1:58009
+1669820827157	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56303" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletiRj8p"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669820827756	Marionette	INFO	Marionette enabled
+1669820827760	Marionette	INFO	Listening on port 34263
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 34263
+WebDriver BiDi listening on ws://127.0.0.1:56303
+1669820827962	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletiRj8p/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56303/devtools/browser/3ae3911b-ac46-4db4-a09f-85a80e54a66a
+[Child 47562, MediaDecoderStateMachine #1] WARNING: Decoder=7fdbde9cf200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 47562, MediaDecoderStateMachine #1] WARNING: Decoder=7fdbde9cf200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 47562, MediaDecoderStateMachine #1] WARNING: Decoder=7fdbdde43100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 47562, MediaDecoderStateMachine #1] WARNING: Decoder=7fdbdde43100 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 47562, MediaDecoderStateMachine #1] WARNING: Decoder=7fdbdde43400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 47562, MediaDecoderStateMachine #1] WARNING: Decoder=7fdbdde43400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 47562, MediaDecoderStateMachine #1] WARNING: Decoder=7fdbdde43400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 47562, MediaDecoderStateMachine #1] WARNING: Decoder=7fdbdde43400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+1669820834677	geckodriver	INFO	Listening on 127.0.0.1:60883
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-b497d4a236d62e41.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+1669820835189	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34297" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileRoXCJO"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669820835900	Marionette	INFO	Marionette enabled
+1669820835906	Marionette	INFO	Listening on port 33279
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 33279
+WebDriver BiDi listening on ws://127.0.0.1:34297
+1669820836082	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileRoXCJO/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:34297/devtools/browser/98759caa-974a-415b-b80c-bb5de3747474
+1669820844467	geckodriver	INFO	Listening on 127.0.0.1:35093
+1669820844948	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "40927" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilevuOM3b"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669820845789	Marionette	INFO	Marionette enabled
+1669820845793	Marionette	INFO	Listening on port 46081
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 46081
+WebDriver BiDi listening on ws://127.0.0.1:40927
+1669820845961	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevuOM3b/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:40927/devtools/browser/5210c9a8-9c49-4945-95c5-e91d1f90358f
+1669820859132	geckodriver	INFO	Listening on 127.0.0.1:50177
+1669820859639	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59281" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiledyF4y8"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669820860491	Marionette	INFO	Marionette enabled
+1669820860495	Marionette	INFO	Listening on port 41031
+Read port: 41031
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:59281
+1669820860694	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiledyF4y8/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59281/devtools/browser/393795b5-05d1-4331-b685-8144ceaca10c
+1669820873337	Marionette	INFO	Stopped listening on port 41031
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669820875260	Marionette	INFO	Stopped listening on port 46081
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1669820876611	Marionette	INFO	Stopped listening on port 33279
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669820878953	Marionette	INFO	Stopped listening on port 34263
+1669820899647	geckodriver	INFO	Listening on 127.0.0.1:43433
+1669820900157	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "50063" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileALUAN3"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669820900807	Marionette	INFO	Marionette enabled
+1669820900811	Marionette	INFO	Listening on port 46529
+Read port: 46529
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:50063
+1669820900997	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileALUAN3/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50063/devtools/browser/8d36c233-e817-4e0e-a4fc-8fbedd524955
+[Child 48896, MediaDecoderStateMachine #1] WARNING: Decoder=7f07abdad700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 48896, MediaDecoderStateMachine #1] WARNING: Decoder=7f07abdad700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 48896, MediaDecoderStateMachine #1] WARNING: Decoder=7f07aa9b4600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 48896, MediaDecoderStateMachine #1] WARNING: Decoder=7f07aa9b4600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 48896, MediaDecoderStateMachine #1] WARNING: Decoder=7f07abe7e700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 48896, MediaDecoderStateMachine #1] WARNING: Decoder=7f07abe7e700 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 48896, MediaDecoderStateMachine #1] WARNING: Decoder=7f07a9f9f600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 48896, MediaDecoderStateMachine #1] WARNING: Decoder=7f07a9f9f600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+1669820907769	Marionette	INFO	Stopped listening on port 46529
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1106: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileALUAN3/protections.sqlite
+1669820908815	geckodriver	INFO	Listening on 127.0.0.1:40547
+1669820909319	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "39647" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile8963fE"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669820909886	Marionette	INFO	Marionette enabled
+1669820909890	Marionette	INFO	Listening on port 37609
+Read port: 37609
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:39647
+1669820910042	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8963fE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:39647/devtools/browser/a9a7bc0e-0feb-4623-aebf-bf1d9f0369ba
+1669820917287	Marionette	INFO	Stopped listening on port 37609
+1669820917954	geckodriver	INFO	Listening on 127.0.0.1:41627
+1669820918460	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "55345" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileEhTZAy"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669820919062	Marionette	INFO	Marionette enabled
+1669820919066	Marionette	INFO	Listening on port 38117
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 38117
+WebDriver BiDi listening on ws://127.0.0.1:55345
+1669820919262	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEhTZAy/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55345/devtools/browser/4bc879ad-bd27-473c-98e4-53b6912fb9e3
+1669820931731	Marionette	INFO	Stopped listening on port 38117
+1669820932421	geckodriver	INFO	Listening on 127.0.0.1:55241
+1669820932931	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "41491" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilecxuzK2"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669820933545	Marionette	INFO	Marionette enabled
+1669820933548	Marionette	INFO	Listening on port 42327
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 42327
+WebDriver BiDi listening on ws://127.0.0.1:41491
+1669820933692	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilecxuzK2/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:41491/devtools/browser/87d5ad4d-737c-4e8d-bc34-030195b29d63
+1669820935774	Marionette	INFO	Stopped listening on port 42327
+1669825263296	geckodriver	INFO	Listening on 127.0.0.1:36369
+1669825263804	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "54991" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile91SwNt"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669825264389	Marionette	INFO	Marionette enabled
+1669825264393	Marionette	INFO	Listening on port 46401
+Read port: 46401
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:54991
+1669825264566	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile91SwNt/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54991/devtools/browser/b8eae377-4afe-4d7a-867d-2e9a807bb524
+[Child 50635, MediaDecoderStateMachine #1] WARNING: Decoder=7f8c73a64500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 50635, MediaDecoderStateMachine #1] WARNING: Decoder=7f8c73a64500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 50635, MediaDecoderStateMachine #1] WARNING: Decoder=7f8c73a64500 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 50635, MediaDecoderStateMachine #1] WARNING: Decoder=7f8c73ee9c00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 50635, MediaDecoderStateMachine #1] WARNING: Decoder=7f8c73ee9c00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 50635, MediaDecoderStateMachine #1] WARNING: Decoder=7f8c73e5cd00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 50635, MediaDecoderStateMachine #1] WARNING: Decoder=7f8c73e5cd00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+1669825270323	Marionette	INFO	Stopped listening on port 46401
+JavaScript warning: https://dqpnq362acqdi.cloudfront.net/_next/static/chunks/7710-b497d4a236d62e41.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to decode media
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 717: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1669825271123	geckodriver	INFO	Listening on 127.0.0.1:37139
+1669825271632	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35229" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileyVN6yo"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669825272213	Marionette	INFO	Marionette enabled
+1669825272217	Marionette	INFO	Listening on port 34955
+Read port: 34955
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:35229
+1669825272381	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileyVN6yo/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:35229/devtools/browser/0dd60617-3135-47d6-a354-ab2b9148d1ba
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 7349 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 742 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1669825281481	Marionette	INFO	Stopped listening on port 34955
+1669825282125	geckodriver	INFO	Listening on 127.0.0.1:42583
+1669825282630	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "60677" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJ5yjF8"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669825283221	Marionette	INFO	Marionette enabled
+1669825283225	Marionette	INFO	Listening on port 38241
+Read port: 38241
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:60677
+1669825283362	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJ5yjF8/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60677/devtools/browser/d0b3cf37-aed0-4873-8e16-60a8060fe6f7
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 6360 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 6773 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1669825296900	Marionette	INFO	Stopped listening on port 38241
+1669825297476	geckodriver	INFO	Listening on 127.0.0.1:60473
+1669825297989	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48923" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilevKaIht"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669825298594	Marionette	INFO	Marionette enabled
+1669825298598	Marionette	INFO	Listening on port 42755
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 42755
+WebDriver BiDi listening on ws://127.0.0.1:48923
+1669825298785	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevKaIht/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:48923/devtools/browser/b42dc26b-1ea9-4256-9faa-db812b6317c0
+1669825300730	Marionette	INFO	Stopped listening on port 42755
+1669825467428	geckodriver	INFO	Listening on 127.0.0.1:43931
+1669825467942	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "49949" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileTDSHzD"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669825468523	Marionette	INFO	Marionette enabled
+1669825468527	Marionette	INFO	Listening on port 38923
+Read port: 38923
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:49949
+1669825468690	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileTDSHzD/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49949/devtools/browser/ed49dfe3-de01-4dd5-a3dc-e0ecaef174e1
+[Child 51939, MediaDecoderStateMachine #1] WARNING: Decoder=7fe583191800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 51939, MediaDecoderStateMachine #1] WARNING: Decoder=7fe587eb2600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 51939, MediaDecoderStateMachine #1] WARNING: Decoder=7fe587eb2600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 51939, MediaDecoderStateMachine #1] WARNING: Decoder=7fe5831b8800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for audio/mp4a-latm: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 51939, MediaDecoderStateMachine #1] WARNING: Decoder=7fe5831b8800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - Error no decoder found for video/avc: file /build/firefox-IO1rhV/firefox-107.0.1+build1/dom/media/MediaDecoderStateMachineBase.cpp:151
+1669825474571	Marionette	INFO	Stopped listening on port 38923
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 717: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1669825475278	geckodriver	INFO	Listening on 127.0.0.1:53711
+1669825475788	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59741" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile1sp19m"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669825476427	Marionette	INFO	Marionette enabled
+1669825476431	Marionette	INFO	Listening on port 36309
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 36309
+WebDriver BiDi listening on ws://127.0.0.1:59741
+1669825476583	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile1sp19m/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59741/devtools/browser/546f1757-1f3d-4e0e-aac0-5f2dc94fd68b
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 7132 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 6613 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1669825484512	Marionette	INFO	Stopped listening on port 36309
+1669825485198	geckodriver	INFO	Listening on 127.0.0.1:51903
+1669825485708	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "53961" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileFFBEDJ"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669825486293	Marionette	INFO	Marionette enabled
+1669825486296	Marionette	INFO	Listening on port 42981
+Read port: 42981
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:53961
+1669825486464	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileFFBEDJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53961/devtools/browser/d6d9de05-fcb0-4bc1-ae9e-bfabe285fed0
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 6796 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Cy76TGYNwlBdeFKzRh_Qc2a075RKB_J9dWAUlCdaUYI.js line 2 > eval line 250 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1669825498904	Marionette	INFO	Stopped listening on port 42981
+1669825499551	geckodriver	INFO	Listening on 127.0.0.1:55141
+1669825500062	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "57459" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileW0OPyx"
+[GFX1-]: glxtest: VA-API test failed: missing or old libva-drm library.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1669825500647	Marionette	INFO	Marionette enabled
+1669825500650	Marionette	INFO	Listening on port 43423
+Read port: 43423
+ATTENTION: default value of option mesa_glthread overridden by environment.
+WebDriver BiDi listening on ws://127.0.0.1:57459
+1669825500826	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileW0OPyx/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57459/devtools/browser/0947943e-d7e0-4104-91c6-33959e6da544
+1669825502651	Marionette	INFO	Stopped listening on port 43423
