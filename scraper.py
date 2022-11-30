@@ -16,19 +16,20 @@ class scraper():
     The webscraper used to maneuver through a website and scrape data from it.
 
     Attributes:
-        film.dicts: A dictionary pairing the film ids with the dictionary of data collected..
+        driver: The WebDriver used to move through the webpages.
+        film_dicts: A dictionary pairing the film ids with the dictionary of data collected.
         page_link_list: A list of the links to the webpages the data is gotten from.
+        film_image_data: A dictionary pairing the film ids with the dictionary of image data collected.
+
     """
     def __init__(self):
         """
         Initialises the attributes and creates the folder for the data to go in.
         """
 
-        if not os.path.isdir("raw_data"):
-            os.makedirs("raw_data")
-
         self.film_dicts = {}
         self.page_link_list = []
+        self.film_image_data = {}
 
         self.driver = webdriver.Firefox()
         URL = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
@@ -111,7 +112,7 @@ class scraper():
         except:
             pass
 
-    def get_info(self):
+    def get_page_info(self):
         """
         Scrapes the films information off the current webpage into a dictionary and adds this the film_dicts attribute.
         """
@@ -160,12 +161,16 @@ class scraper():
         self.film_dicts[film_id] = film_info
 
 
-    def scrape_from_link_list(self,num_pages = -1):
+    def scrape_from_link_list(self,num_pages = -1, get_info = True, get_images = False, num_images = -1):
         """
         Loops through the links in the page_link_list attribute and scrapes the film info in each one.
 
         Args:
             num_pages: An integer indicating how many films info to get. If not specified it gets the information for all of them.
+            get_info: A boolean deciding whether to  scrape the film information.
+            get_images: A boolean deciding whether to scrape the image data.
+            num_images: An integer dictating the number of images scraped.
+
         """
 
 
@@ -176,16 +181,23 @@ class scraper():
             self.driver.get(link)
             sleep(0.5)
             self.remove_review_box()
-            self.get_info()
-            #imdb_scraper.get_images()
+
+            if get_info == True: 
+                self.get_page_info()
+            
+            if get_images == True:
+                self.get_page_images(num_images= num_images)
 
 
-    def save_to_file(self):
+    def save_info_to_file(self):
         """
-        Creates and saves the data in the film_dicts attribute to json files matching the film id.
+        Saves the data in the film_dicts attribute to json files within folders matching the film id.
         """
 
-        for film_id, film_info in self.film_dicts:
+        if not os.path.isdir("raw_data"):
+            os.makedirs("raw_data")
+
+        for film_id, film_info in self.film_dicts.items():
 
             if not os.path.isdir("raw_data/"+film_id):
                 os.makedirs("raw_data/"+film_id)
@@ -201,27 +213,24 @@ class scraper():
 
 
 
-
-    def get_images(self):
+    def get_page_images(self, num_images = -1):
 
         """
-        Locates the page containing the additional images for the current webpage, and saves them in the folder corrosponding to the film.
+        Locates the pages containing the additional images for the current webpage and saves the images in to a dictionary.
+
+        Args:
+            num_images: an integer indicating the maximum number of images the user wants to scrape, if not specified then all images are scraped.
         """
 
-        date_list = str(date.today()).split('-')
-        date_str = ''
-        for i in date_list:
-            date_str += i
+        
+        image_dictionary = {}
+
+        date_str = ''.join(str(date.today()).split('-'))
 
 
         current_url = self.driver.current_url
         film_id = current_url.split('/')[4]
 
-        if not os.path.isdir("raw_data/"+film_id):
-            os.makedirs("raw_data/"+film_id)
-
-        if not os.path.isdir("raw_data/"+film_id+'/images'):
-            os.makedirs("raw_data/"+film_id+'/images')
 
         self.driver.get('https://www.imdb.com/title/'+film_id+'/mediaindex')
 
@@ -231,10 +240,10 @@ class scraper():
         image_page_list = image_page_span.find_elements(By.XPATH, './a')
         num_image_pages = len(image_page_list)+1
 
+
         counter = 1
 
-        #for i in range(1,num_image_pages+1):
-        for i in range(1,min(3,num_image_pages)):
+        for i in range(1,num_image_pages+1):
             delay = 3
             self.driver.get(f'https://www.imdb.com/title/{film_id}/mediaindex?page={i}')
 
@@ -244,16 +253,43 @@ class scraper():
             thumnail_grid = self.driver.find_element(By.XPATH, '//div[@class="media_index_thumb_list"]')
             image_list = thumnail_grid.find_elements(By.XPATH,'./a')
 
-            for image in image_list[:10]:
+            for image in image_list:
 
                 image_src = image.find_element(By.XPATH, './img').get_attribute('src')
                 image_data = requests.get(image_src).content
                 image_name = f'{date_str}_{film_id}_{counter}.jpg'
 
-                with open(f'raw_data/{film_id}/images/{image_name}', 'wb') as file:
-                    file.write(image_data)
+                image_dictionary[image_name] = image_data
+
+                if counter == num_images:
+                    self.film_image_data[film_id] = image_dictionary
+                    return
 
                 counter += 1
+                print(counter)
+
+        
+        self.film_image_data[film_id] = image_dictionary
+
+    def save_images_to_file(self):
+        """
+        Saves the image data in the film_image_data attribute to jpgs in a folder within the film folder for each film.
+        """
+
+        if not os.path.isdir("raw_data"):
+            os.makedirs("raw_data")
+
+        for film_id, image_dicts in self.film_image_data.items():
+
+            if not os.path.isdir("raw_data/"+film_id):
+                os.makedirs("raw_data/"+film_id)
+
+            if not os.path.isdir("raw_data/"+film_id+'/images'):
+                os.makedirs("raw_data/"+film_id+'/images')
+
+            for image_name, image_data in image_dicts.items():
+                with open(f'raw_data/{film_id}/images/{image_name}', 'wb') as file:
+                    file.write(image_data)
 
 
 
@@ -265,9 +301,11 @@ if __name__ == '__main__':
         sleep(0.5)
         imdb_scraper.next_page()
 
-    imdb_scraper.scrape_from_link_list(3)
+    imdb_scraper.scrape_from_link_list(3, get_images=True, num_images = 10)
 
-    imdb_scraper.save_to_file()
+    imdb_scraper.save_info_to_file()
+
+    imdb_scraper.save_images_to_file()
 
     #print(imdb_scraper.film_dicts)
 
