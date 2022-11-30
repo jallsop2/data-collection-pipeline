@@ -196,3 +196,53 @@ def get_images(self,driver):
             counter += 1
 ```
 
+# Milestone 5
+The aim of this milestone was optimising code, as well as adding docstrings and unit tests to the public methods.
+
+The unit testing was done by creating a test file test_scraper, and using the unittest package, which easily allowes the creation of unit tests. 4 tests were created. Firstly it checks whether the scraper can move to the next page as it should. Next it checks that the get_page_link_list method does in fact return a list. Then it checks that the scrape_from_link_list returns the film data in the expected format as a nested dictionary. Finally it checks that the save_info_to_file function correctly converts and saves the inforamtion as a json file.
+
+```python
+class ScraperTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.test_scraper = scraper()    
+
+    def test_next_page(self):
+        url = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
+        self.test_scraper.load_link(url)
+        sleep(2)
+        self.test_scraper.next_page()
+        sleep(5)
+        next_url = "https://www.imdb.com/search/keyword/?page=2&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&release_date=%2C2021&sort=moviemeter,asc"
+        current_url = self.test_scraper.driver.current_url
+        self.assertEqual(next_url,current_url)
+
+    def test_get_page_links(self):
+        url = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
+        self.test_scraper.load_link(url)
+        sleep(2)
+        output = self.test_scraper.get_page_links()
+        self.assertIsInstance(output, list)
+
+    def test_get_info(self):
+        self.test_scraper.page_link_list = ['https://www.imdb.com/title/tt1825683']
+        self.test_scraper.scrape_from_link_list()
+
+        for film_id, film_dict in self.test_scraper.film_dicts.items():
+            self.assertIsInstance(film_dict, dict)
+            self.assertEqual(film_id,film_dict['IMDb Id'])
+
+    def test_save_info_to_file(self):
+        self.test_scraper.film_dicts = {"test_data":{"key 1": "value 1","key 2": "value 2","key 3": "value 3","Poster Url":"https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_QL75_UX190_CR0,0,190,281_.jpg"}}
+        self.test_scraper.save_info_to_file()
+
+        try:
+            with open("raw_data/test_data/data.json") as f:
+                return json.load(f)
+        except ValueError as e:
+            print('Invalid json: %s' % e)
+
+    def tearDown(self):
+        self.test_scraper.driver.quit()
+```
+
