@@ -98,7 +98,6 @@ class scraper():
                 return
             except:
                 sleep(0.5)
-                print(i)
         
         next_button = self.driver.find_element(by=By.XPATH, value='//a[@class="lister-page-next next-page"]')
         next_button.click()
@@ -181,7 +180,10 @@ class scraper():
         if num_pages == -1:
             num_pages = len(self.page_link_list)
 
+        counter = 1
         for link in self.page_link_list[:num_pages]:
+            print(counter)
+            counter += 1
             self.driver.get(link)
             sleep(0.5)
             self.remove_review_box()
@@ -266,7 +268,6 @@ class scraper():
                     return
 
                 counter += 1
-                print(counter)
 
         self.film_image_data[film_id] = image_dictionary
 
@@ -298,18 +299,23 @@ if __name__ == '__main__':
     URL = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
     imdb_scraper.load_link(URL)
     
+    print('Scraping links')
     for i in range(2):
+        print(f'Page {i+1}')
         imdb_scraper.page_link_list.extend(imdb_scraper.get_page_links())
         sleep(0.5)
         imdb_scraper.next_page()
 
-    imdb_scraper.scrape_from_link_list(3, get_images=True, num_images = 10)
+    print('Scraping from list:')
+    imdb_scraper.scrape_from_link_list(num_pages=2,get_images=True, num_images = 10)
 
-    imdb_scraper.save_info_to_file()
+    print('Saving data')
 
-    imdb_scraper.save_images_to_file()
+    #imdb_scraper.save_info_to_file()
 
-    #print(imdb_scraper.film_dicts)
+    #imdb_scraper.save_images_to_file()
+
+    print(imdb_scraper.film_dicts)
 
     imdb_scraper.driver.quit()
 
