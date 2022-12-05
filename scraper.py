@@ -1,13 +1,9 @@
 from datetime import date
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
-from time import sleep
+from bs4 import BeautifulSoup
 import json 
 import os 
 import requests
+
 
 
 
@@ -31,168 +27,205 @@ class scraper():
         self.page_link_list = []
         self.film_image_data = {}
 
-        options = Options()
-        options.add_argument("--headless")
 
-        self.driver = webdriver.Firefox(options=options)
-
-
-    def load_link(self, web_link):
-        self.driver.get(web_link)
-
-    def accept_cookies(self):
-        """
-        Accepts the cookies if the website prompts it.
-        """
-        
-        delay = 10
-        sleep(1) 
-
-        try: 
-            WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//*[@id="gdpr-consent-notice"]')))
-            self.driver.switch_to.frame('gdpr-consent-notice')
-            accept_cookies_button = WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//*[@id="save"]')))
-            accept_cookies_button = self.driver.find_element(by=By.XPATH, value='//*[@id="save"]')
-            accept_cookies_button.click()
-            self.driver.switch_to.default_content()
-
-        except:
-            pass
-
-
-    def get_page_links(self):
+    def get_page_links(self, link_page, num_films = -1):
         """
         Returns a list of links for the webpae of each of the film on this page.
         """
 
-        delay = 10
-
-        WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="lister-item-content"]')))
-        film_container = self.driver.find_element(by=By.XPATH, value='//div[@class="lister-list"]')
-        film_list = film_container.find_elements(by=By.XPATH, value='./div')
+        page = requests.get(link_page)
+        html = page.text 
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        film_container = soup.find(name='div', attrs={'class':'lister-list'})
+        film_list = film_container.findChildren('div', recursive=False)
         link_list = []
 
+        counter = 0
+
         for film in film_list:
-            film_content = film.find_element(by=By.XPATH, value='.//div[@class="lister-item-content"]')
-            #span_tag = film_content.find_element(by=By.XPATH, value='.//span[@class="lister-item-year text-muted unbold"]')
-            #film_date = span_tag.text
-            #film_date = film_date[1:-1]
-            #if film_date != '2022':
-            a_tag = film_content.find_element(by=By.XPATH, value='.//a')
-            link = a_tag.get_attribute('href')
-            link_list.append(link)
+            film_content = film.find(name='div', attrs={'class':'lister-item-content'})
+            a_tag = film_content.find('a')
+            
+            link_part = a_tag['href']
+            link_list.append(f'https://www.imdb.com{link_part}')
+
+            counter += 1
+            if counter == num_films:
+                break
 
         return link_list
 
-    def next_page(self):
-        """
-        Clicks the next page button.
-        """
-        delay = 10
-        WebDriverWait(self.driver, delay).until(EC.element_to_be_clickable((By.XPATH, '//a[@class="lister-page-next next-page"]')))
+    def get_film_links(self,num_films):
 
-        for i in range(5):
-            try:
-                next_button = self.driver.find_element(by=By.XPATH, value='//a[@class="lister-page-next next-page"]')
-                next_button.click()
-                return
-            except:
-                sleep(0.5)
-        
-        next_button = self.driver.find_element(by=By.XPATH, value='//a[@class="lister-page-next next-page"]')
-        next_button.click()
+        films_left = num_films
+        page_num = 1
+        while True:
 
-    def remove_review_box(self):
-        """
-        Closes the prompt to review the film if it appears.
-        """
-        
-        try:
-            review_prompt = self.driver.find_element(By.XPATH, '//div[@class="ipc-promptable-base ipc-promptable-dialog ipc-rating-prompt enter-done"]')
-            close_button = review_prompt.find_element(By.XPATH, './/button[@title="Close Prompt"]')
-            close_button.click()
-        
-        except:
-            pass
+            url = f"https://www.imdb.com/search/keyword/?page={page_num}&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
+                        
+            self.page_link_list.extend(self.get_page_links(url, films_left))
 
-    def get_page_info(self):
+            films_left = num_films - len(self.page_link_list)
+            page_num += 1
+
+            if films_left == 0:
+                break
+
+    
+
+    def get_page_info(self, link):
         """
-        Scrapes the films information off the current webpage into a dictionary and adds this the film_dicts attribute.
+        Scrapes the films information from the into a dictionary and adds this the film_dicts attribute.
         """
 
         film_info = {}
-        delay = 10
-        WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')))
 
-        current_url = self.driver.current_url
-        film_id = current_url.split('/')[4]
+        headers = {'User-Agent': "Mozilla/5.0"}
+        page = requests.get(link, headers=headers)
+        html = page.text 
+        soup = BeautifulSoup(html, 'html.parser')
+
+
+        film_id = link.split('/')[4]
         film_info['IMDb Id'] = film_id
 
-        top_info_container_left = self.driver.find_element(By.XPATH, '//div[@class="sc-80d4314-1 fbQftq"]')
+        
+        top_info_container_left = soup.find(name='div', attrs={'class':'sc-80d4314-1 fbQftq'})
 
-        film_name = top_info_container_left.find_element(by=By.XPATH, value='.//h1[@data-testid="hero-title-block__title"]').text
+        film_name = top_info_container_left.find(name='h1',attrs={'data-testid':"hero-title-block__title"}).text
         film_info['Name'] = film_name
 
-        top_info_list = top_info_container_left.find_elements(by=By.XPATH, value='.//li[@class="ipc-inline-list__item"]')
-        film_info['Year Released'] = top_info_list[0].find_element(by=By.XPATH, value='.//a').text
-        film_info['Age Rating'] = top_info_list[1].find_element(by=By.XPATH, value='.//a').text
+        top_info_list = top_info_container_left.find_all('li',{'class':"ipc-inline-list__item"})
+        film_info['Year Released'] = top_info_list[0].find('a').text
+        film_info['Age Rating'] = top_info_list[1].find('a').text
         film_info['Length'] = top_info_list[2].text
 
-        top_info_container_right = self.driver.find_element(By.XPATH, '//div[@class="sc-db8c1937-0 eGmDjE sc-80d4314-3 iBtAhY"]')
-        film_info['IMDb Rating'] = top_info_container_right.find_element(By.XPATH, './/span[@class="sc-7ab21ed2-1 jGRxWM"]').text
+        top_info_container_right = soup.find('div',{'class':"sc-db8c1937-0 eGmDjE sc-80d4314-3 iBtAhY"})
+        film_info['IMDb Rating'] = top_info_container_right.find('span',{'class':"sc-7ab21ed2-1 jGRxWM"}).text
 
-        secondary_container = self.driver.find_element(By.XPATH, '//div[@class="sc-7643a8e3-10 itwFpV"]')
-        director_info = secondary_container.find_element(By.XPATH, './/li[@data-testid="title-pc-principal-credit"]')
-        film_info['Director'] = director_info.find_element(By.XPATH, './/a').text
+        secondary_container = soup.find('div',{'class':"sc-7643a8e3-10 itwFpV"})
+        director_info = secondary_container.find('li',{'data-testid':"title-pc-principal-credit"})
+        film_info['Director'] = director_info.find('a').text
         
-        details_section = self.driver.find_element(By.XPATH, '//section[@data-testid="Details"]')
-        country_section = details_section.find_element(By.XPATH, './/li[@data-testid="title-details-origin"]')
-        film_info['Country of Origin'] = country_section.find_element(By.XPATH, './/a').text
+        details_section = soup.find('section',{'data-testid':"Details"})
+        country_section = details_section.find('li',{'data-testid':"title-details-origin"})
+        film_info['Country of Origin'] = country_section.find('a').text
 
-        box_office_section = self.driver.find_element(By.XPATH, '//div[@data-testid="title-boxoffice-section"]')
-        box_office_detail_list = box_office_section.find_elements(By.XPATH, './ul/li')
-        film_info['Budget'] = box_office_detail_list[0].find_element(By.XPATH, './/label').text.split(' ')[0]
-        film_info['Gross Profit'] = box_office_detail_list[3].find_element(By.XPATH, './/label').text
+        box_office_section = soup.find('div',{'data-testid':"title-boxoffice-section"})
+        inner_box_office_section = box_office_section.find('ul')
+        box_office_detail_list = inner_box_office_section.findChildren('li', recursive=False)
+        film_info['Budget'] = box_office_detail_list[0].find('label').text.split(' ')[0]
+        film_info['Gross Profit'] = box_office_detail_list[3].find('label').text
 
-        poster_container = self.driver.find_element(By.XPATH, '//div[@data-testid="hero-media__poster--inline-video"]')
-        film_info['Poster Url'] = poster_container.find_element(By.XPATH, './/img[@class="ipc-image"]').get_attribute('src')
+        poster_container = soup.find('div',{'data-testid':"hero-media__poster--inline-video"})
+        film_info['Poster Url'] = poster_container.find('img',{'class':"ipc-image"})['src']
 
         film_info['Date Scraped'] = str(date.today())
 
-        film_info['IMDb Webpage'] = 'https://www.imdb.com/title/' + film_id
+        film_info['IMDb Webpage'] = link
 
         self.film_dicts[film_id] = film_info
 
 
-    def scrape_from_link_list(self,num_pages = -1, get_info = True, get_images = False, num_images = -1):
+    def get_page_images(self, link, num_images, num_images_scraped):
+
+        """
+        Locates the pages containing the additional images for the current webpage and saves the images in to a dictionary.
+
+        Args:
+            num_images: an integer indicating the maximum number of images the user wants to scrape, if not specified then all images are scraped.
+        """
+
+        headers = {'User-Agent': "Mozilla/5.0"}
+        page = requests.get(link, headers=headers)
+        html = page.text 
+        soup = BeautifulSoup(html, 'html.parser')
+
+        date_str = ''.join(str(date.today()).split('-'))
+        film_id = link.split('/')[4]
+        counter = num_images_scraped+1
+        page_image_dict = {}
+
+
+        thumnail_grid = soup.find('div',{'class':"media_index_thumb_list"})
+        image_list = thumnail_grid.findChildren('a', recursive=False)
+
+
+        for image in image_list:
+            print(counter)
+
+            image_src = image.findChildren('img', recursive=False)[0]['src']
+            image_data = requests.get(image_src).content
+            image_name = f'{date_str}_{film_id}_{counter}.jpg'
+
+            page_image_dict[image_name] = image_data
+
+            if counter == num_images:
+                return page_image_dict
+            
+            counter += 1
+        return page_image_dict
+
+        
+
+    def get_film_images(self, link, num_images):
+
+        image_dict = {}
+
+        film_id = link.split('/')[4]
+
+        image_page_url = f'https://www.imdb.com/title/{film_id}/mediaindex'
+
+        headers = {'User-Agent': "Mozilla/5.0"}
+        page = requests.get(image_page_url, headers=headers)
+        html = page.text 
+        soup = BeautifulSoup(html, 'html.parser')
+
+        image_page_span = soup.find('span', {'class':"page_list"})
+        image_page_list = image_page_span.findChildren('a', recursive=False)
+        num_image_pages = len(image_page_list)+1
+
+        num_images_left = num_images
+
+        for i in range(1,num_image_pages+1):
+
+            page_number_url = f'https://www.imdb.com/title/{film_id}/mediaindex?page={i}'
+
+            image_dict.update(self.get_page_images(page_number_url, num_images_left, len(image_dict)))
+
+            num_images_left = num_images - len(image_dict)
+
+            if num_images_left == 0:
+                break
+
+            
+        self.film_image_data[film_id] = image_dict
+
+
+    def scrape_from_link_list(self, get_info = True, get_images = False, num_images = -1):
         """
         Loops through the links in the page_link_list attribute and scrapes the film info in each one.
 
         Args:
-            num_pages: An integer indicating how many films info to get. If not specified it gets the information for all of them.
             get_info: A boolean deciding whether to  scrape the film information.
             get_images: A boolean deciding whether to scrape the image data.
             num_images: An integer dictating the number of images scraped.
 
         """
-
-
-        if num_pages == -1:
-            num_pages = len(self.page_link_list)
-
         counter = 1
-        for link in self.page_link_list[:num_pages]:
-            print(counter)
-            counter += 1
-            self.driver.get(link)
-            sleep(0.5)
-            self.remove_review_box()
 
+        for link in self.page_link_list:
+            print(counter)
+            
+            
             if get_info == True: 
-                self.get_page_info()
+                self.get_page_info(link)
             
             if get_images == True:
-                self.get_page_images(num_images= num_images)
+                self.get_film_images(link, num_images= num_images)
+
+            counter += 1
 
 
     def save_info_to_file(self):
@@ -218,59 +251,6 @@ class scraper():
                 file.write(json_film_info)
 
 
-
-    def get_page_images(self, num_images = -1):
-
-        """
-        Locates the pages containing the additional images for the current webpage and saves the images in to a dictionary.
-
-        Args:
-            num_images: an integer indicating the maximum number of images the user wants to scrape, if not specified then all images are scraped.
-        """
-
-        image_dictionary = {}
-
-        date_str = ''.join(str(date.today()).split('-'))
-
-        current_url = self.driver.current_url
-        film_id = current_url.split('/')[4]
-
-        self.driver.get('https://www.imdb.com/title/'+film_id+'/mediaindex')
-
-        sleep(0.5)
-
-        image_page_span = self.driver.find_element(By.XPATH, '//span[@class="page_list"]')
-        image_page_list = image_page_span.find_elements(By.XPATH, './a')
-        num_image_pages = len(image_page_list)+1
-
-        counter = 1
-
-        for i in range(1,num_image_pages+1):
-            delay = 3
-            self.driver.get(f'https://www.imdb.com/title/{film_id}/mediaindex?page={i}')
-
-            sleep(0.5)
-
-            WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="media_index_thumb_list"]')))
-            thumnail_grid = self.driver.find_element(By.XPATH, '//div[@class="media_index_thumb_list"]')
-            image_list = thumnail_grid.find_elements(By.XPATH,'./a')
-
-            for image in image_list:
-
-                image_src = image.find_element(By.XPATH, './img').get_attribute('src')
-                image_data = requests.get(image_src).content
-                image_name = f'{date_str}_{film_id}_{counter}.jpg'
-
-                image_dictionary[image_name] = image_data
-
-                if counter == num_images:
-                    self.film_image_data[film_id] = image_dictionary
-                    return
-
-                counter += 1
-
-        self.film_image_data[film_id] = image_dictionary
-
     def save_images_to_file(self):
         """
         Saves the image data in the film_image_data attribute to jpgs in a folder within the film folder for each film.
@@ -295,27 +275,20 @@ class scraper():
 
 if __name__ == '__main__':
     imdb_scraper = scraper()
-
-    URL = "https://www.imdb.com/search/keyword/?page=1&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
-    imdb_scraper.load_link(URL)
     
     print('Scraping links')
-    for i in range(2):
-        print(f'Page {i+1}')
-        imdb_scraper.page_link_list.extend(imdb_scraper.get_page_links())
-        sleep(0.5)
-        imdb_scraper.next_page()
+
+    imdb_scraper.get_film_links(5)
+    print(imdb_scraper.page_link_list)
+    #print(len(imdb_scraper.page_link_list))
 
     print('Scraping from list:')
-    imdb_scraper.scrape_from_link_list(num_pages=2,get_images=True, num_images = 10)
+    imdb_scraper.scrape_from_link_list(get_images=True, num_images=3)
 
     print('Saving data')
 
-    #imdb_scraper.save_info_to_file()
+    imdb_scraper.save_info_to_file()
 
-    #imdb_scraper.save_images_to_file()
+    imdb_scraper.save_images_to_file()
 
-    print(imdb_scraper.film_dicts)
-
-    imdb_scraper.driver.quit()
-
+    #print(imdb_scraper.film_dicts)
