@@ -61,6 +61,7 @@ class scraper():
         films_left = num_films
         page_num = 1
         while True:
+            print(f'    Page {page_num}')
 
             url = f"https://www.imdb.com/search/keyword/?page={page_num}&keywords=superhero&title_type=movie&explore=keywords&mode=detail&ref_=kw_nxt&sort=moviemeter,asc&release_date=%2C2021"
                         
@@ -216,7 +217,7 @@ class scraper():
         counter = 1
 
         for link in self.page_link_list:
-            print(counter)
+            print(f'    Film {counter}')
             
             
             if get_info == True: 
@@ -274,18 +275,25 @@ class scraper():
 
 
 if __name__ == '__main__':
+
+    num_films = input('How many films do you want to scrape? ')
+    num_images = input('\nHow many images do you want to scrape? ')
     imdb_scraper = scraper()
     
-    print('Scraping links')
+    print('\nScraping links')
 
-    imdb_scraper.get_film_links(5)
+    imdb_scraper.get_film_links(num_films)
     print(imdb_scraper.page_link_list)
     #print(len(imdb_scraper.page_link_list))
 
-    print('Scraping from list:')
-    imdb_scraper.scrape_from_link_list(get_images=True, num_images=3)
+    print('\nScraping from list:')
 
-    print('Saving data')
+    if num_images == 0:
+        imdb_scraper.scrape_from_link_list()
+    else:
+        imdb_scraper.scrape_from_link_list(get_images=True, num_images=num_images)
+
+    print('\nSaving data')
 
     imdb_scraper.save_info_to_file()
 
