@@ -1,5 +1,6 @@
 from datetime import date
 from bs4 import BeautifulSoup
+from shutil import rmtree
 import json 
 import os 
 import requests
@@ -234,9 +235,6 @@ class scraper():
         Saves the data in the film_dicts attribute to json files within folders matching the film id.
         """
 
-        if not os.path.isdir("raw_data"):
-            os.makedirs("raw_data")
-
         for film_id, film_info in self.film_dicts.items():
 
             if not os.path.isdir("raw_data/"+film_id):
@@ -257,9 +255,7 @@ class scraper():
         Saves the image data in the film_image_data attribute to jpgs in a folder within the film folder for each film.
         """
 
-        if not os.path.isdir("raw_data"):
-            os.makedirs("raw_data")
-
+        
         for film_id, image_dicts in self.film_image_data.items():
 
             if not os.path.isdir("raw_data/"+film_id):
@@ -272,12 +268,24 @@ class scraper():
                 with open(f'raw_data/{film_id}/images/{image_name}', 'wb') as file:
                     file.write(image_data)
 
+    def save_to_file(self):
+
+        if os.path.isdir("raw_data"):
+            rmtree('raw_data')
+
+        if not os.path.isdir("raw_data"):
+            os.makedirs("raw_data")
+
+        self.save_info_to_file()
+        self.save_images_to_file()
+
+        
 
 
 if __name__ == '__main__':
 
-    num_films = input('How many films do you want to scrape? ')
-    num_images = input('\nHow many images do you want to scrape? ')
+    num_films = int(input('How many films do you want to scrape? '))
+    num_images = int(input('\nHow many images do you want to scrape? '))
     imdb_scraper = scraper()
     
     print('\nScraping links')
@@ -295,8 +303,7 @@ if __name__ == '__main__':
 
     print('\nSaving data')
 
-    imdb_scraper.save_info_to_file()
+    imdb_scraper.save_to_file()
 
-    imdb_scraper.save_images_to_file()
 
     #print(imdb_scraper.film_dicts)
