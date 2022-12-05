@@ -1,6 +1,6 @@
-from datetime import date
 from bs4 import BeautifulSoup
 from shutil import rmtree
+import datetime
 import json 
 import os 
 import requests
@@ -123,7 +123,7 @@ class scraper():
         poster_container = soup.find('div',{'data-testid':"hero-media__poster--inline-video"})
         film_info['Poster Url'] = poster_container.find('img',{'class':"ipc-image"})['src']
 
-        film_info['Date Scraped'] = str(date.today())
+        film_info['Date Scraped'] = str(datetime.date.today())
 
         film_info['IMDb Webpage'] = link
 
@@ -144,7 +144,7 @@ class scraper():
         html = page.text 
         soup = BeautifulSoup(html, 'html.parser')
 
-        date_str = ''.join(str(date.today()).split('-'))
+        date_str = ''.join(str(datetime.date.today()).split('-'))
         film_id = link.split('/')[4]
         counter = num_images_scraped+1
         page_image_dict = {}
@@ -230,27 +230,26 @@ class scraper():
             counter += 1
 
 
-    def save_info_to_file(self):
+    def save_info_to_file(self, datetime_str):
         """
         Saves the data in the film_dicts attribute to json files within folders matching the film id.
         """
 
         for film_id, film_info in self.film_dicts.items():
 
-            if not os.path.isdir("raw_data/"+film_id):
-                os.makedirs("raw_data/"+film_id)
+            os.makedirs(f"raw_data/{datetime_str}/{film_id}")
 
             poster_data = requests.get(film_info['Poster Url']).content
-            with open(f'raw_data/{film_id}/poster_{film_id}.jpg', 'wb') as file:
+            with open(f'raw_data/{datetime_str}/{film_id}/poster_{film_id}.jpg', 'wb') as file:
                 file.write(poster_data)
         
 
             json_film_info =json.dumps(film_info,indent=4)
-            with open(f'raw_data/{film_id}/data.json','w') as file:
+            with open(f'raw_data/{datetime_str}/{film_id}/data.json','w') as file:
                 file.write(json_film_info)
 
 
-    def save_images_to_file(self):
+    def save_images_to_file(self, datetime_str):
         """
         Saves the image data in the film_image_data attribute to jpgs in a folder within the film folder for each film.
         """
@@ -258,26 +257,27 @@ class scraper():
         
         for film_id, image_dicts in self.film_image_data.items():
 
-            if not os.path.isdir("raw_data/"+film_id):
-                os.makedirs("raw_data/"+film_id)
+            if not os.path.isdir(f"raw_data/{datetime_str}/{film_id}"):
+                os.makedirs(f"raw_data/{datetime_str}/{film_id}")
 
-            if not os.path.isdir("raw_data/"+film_id+'/images'):
-                os.makedirs("raw_data/"+film_id+'/images')
+            os.makedirs(f'raw_data/{datetime_str}/{film_id}/images')
 
             for image_name, image_data in image_dicts.items():
-                with open(f'raw_data/{film_id}/images/{image_name}', 'wb') as file:
+                with open(f'raw_data/{datetime_str}/{film_id}/images/{image_name}', 'wb') as file:
                     file.write(image_data)
+
 
     def save_to_file(self):
 
-        if os.path.isdir("raw_data"):
-            rmtree('raw_data')
+        datetime_str = datetime.datetime.today().strftime('%Y%m%d_%H%M%S')
 
         if not os.path.isdir("raw_data"):
             os.makedirs("raw_data")
+        
+        os.makedirs(f"raw_data/{datetime_str}")
 
-        self.save_info_to_file()
-        self.save_images_to_file()
+        self.save_info_to_file(datetime_str)
+        self.save_images_to_file(datetime_str)
 
         
 
