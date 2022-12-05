@@ -114,12 +114,6 @@ class scraper():
         country_section = details_section.find('li',{'data-testid':"title-details-origin"})
         film_info['Country of Origin'] = country_section.find('a').text
 
-        box_office_section = soup.find('div',{'data-testid':"title-boxoffice-section"})
-        inner_box_office_section = box_office_section.find('ul')
-        box_office_detail_list = inner_box_office_section.findChildren('li', recursive=False)
-        film_info['Budget'] = box_office_detail_list[0].find('label').text.split(' ')[0]
-        film_info['Gross Profit'] = box_office_detail_list[3].find('label').text
-
         poster_container = soup.find('div',{'data-testid':"hero-media__poster--inline-video"})
         film_info['Poster Url'] = poster_container.find('img',{'class':"ipc-image"})['src']
 
@@ -155,7 +149,7 @@ class scraper():
 
 
         for image in image_list:
-            print(counter)
+            #print(f'        counter')
 
             image_src = image.findChildren('img', recursive=False)[0]['src']
             image_data = requests.get(image_src).content
@@ -172,6 +166,8 @@ class scraper():
         
 
     def get_film_images(self, link, num_images):
+
+        #print('    Images:')
 
         image_dict = {}
 
@@ -194,7 +190,7 @@ class scraper():
 
             page_number_url = f'https://www.imdb.com/title/{film_id}/mediaindex?page={i}'
 
-            image_dict.update(self.get_page_images(page_number_url, num_images_left, len(image_dict)))
+            image_dict.update(self.get_page_images(page_number_url, num_images, len(image_dict)))
 
             num_images_left = num_images - len(image_dict)
 
@@ -253,7 +249,6 @@ class scraper():
         """
         Saves the image data in the film_image_data attribute to jpgs in a folder within the film folder for each film.
         """
-
         
         for film_id, image_dicts in self.film_image_data.items():
 
@@ -291,8 +286,6 @@ if __name__ == '__main__':
     print('\nScraping links')
 
     imdb_scraper.get_film_links(num_films)
-    print(imdb_scraper.page_link_list)
-    #print(len(imdb_scraper.page_link_list))
 
     print('\nScraping from list:')
 
