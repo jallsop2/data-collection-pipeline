@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from shutil import rmtree
+from sys import exit
 import datetime
 import json 
 import os 
@@ -29,9 +29,13 @@ class scraper():
         self.film_image_data = {}
 
 
-    def get_page_links(self, link_page, num_films = -1):
+    def get_page_links(self, link_page, max_num_films = -1):
         """
         Returns a list of links for the webpae of each of the film on this page.
+
+        Args:
+            link_page = A string containing the link to the webpage which is being scraped
+            max_num_films = An integer denoting the maximum number of links to be scraped on this page
         """
 
         page = requests.get(link_page)
@@ -52,12 +56,18 @@ class scraper():
             link_list.append(f'https://www.imdb.com{link_part}')
 
             counter += 1
-            if counter == num_films:
+            if counter == max_num_films:
                 break
 
         return link_list
 
     def get_film_links(self,num_films):
+        """
+        Adds the requested number of film links to the page_link_list attribute.
+
+        Arg:
+            num_films = An integer showing the number of films to scrape
+        """
 
         films_left = num_films
         page_num = 1
@@ -79,6 +89,9 @@ class scraper():
     def get_page_info(self, link):
         """
         Scrapes the films information from the into a dictionary and adds this the film_dicts attribute.
+
+        Args:
+            link = A string containing the link to scrape the information from.
         """
 
         film_info = {}
@@ -127,10 +140,12 @@ class scraper():
     def get_page_images(self, link, num_images, num_images_scraped):
 
         """
-        Locates the pages containing the additional images for the current webpage and saves the images in to a dictionary.
+        Scrapes the requested number of images from the current webpage
 
         Args:
-            num_images: an integer indicating the maximum number of images the user wants to scrape, if not specified then all images are scraped.
+            link: The url of the page containing the images to be scraped.
+            num_images: An integer indicating the maximum number of images the user wants to scrape, if not specified then all images are scraped.
+            num_images_scraped: An integer shoowing the number of images already scraped.
         """
 
         headers = {'User-Agent': "Mozilla/5.0"}
@@ -167,8 +182,14 @@ class scraper():
 
     def get_film_images(self, link, num_images):
 
-        #print('    Images:')
+        """
+        Gets the requested number of images for the current film.
 
+        Args:
+            link: The links to the page for the current film.
+            num_images: The number of images the user want to scrape
+        """
+        
         image_dict = {}
 
         film_id = link.split('/')[4]
@@ -201,14 +222,13 @@ class scraper():
         self.film_image_data[film_id] = image_dict
 
 
-    def scrape_from_link_list(self, get_info = True, get_images = False, num_images = -1):
+    def scrape_from_link_list(self, get_info = True, num_images = 0):
         """
-        Loops through the links in the page_link_list attribute and scrapes the film info in each one.
+        Loops through the links in the page_link_list attribute and scrapes the requested data from each one.
 
         Args:
             get_info: A boolean deciding whether to  scrape the film information.
-            get_images: A boolean deciding whether to scrape the image data.
-            num_images: An integer dictating the number of images scraped.
+            num_images: An integer dictating the number of images to be scraped.
 
         """
         counter = 1
@@ -220,7 +240,7 @@ class scraper():
             if get_info == True: 
                 self.get_page_info(link)
             
-            if get_images == True:
+            if num_images > 0:
                 self.get_film_images(link, num_images= num_images)
 
             counter += 1
@@ -229,6 +249,9 @@ class scraper():
     def save_info_to_file(self, datetime_str):
         """
         Saves the data in the film_dicts attribute to json files within folders matching the film id.
+
+        Args:
+            datetime_str: A string containing the date and time in a string, also the name of the folder to save the data in.
         """
 
         for film_id, film_info in self.film_dicts.items():
@@ -248,6 +271,9 @@ class scraper():
     def save_images_to_file(self, datetime_str):
         """
         Saves the image data in the film_image_data attribute to jpgs in a folder within the film folder for each film.
+
+        Args:
+            datetime_str: A string containing the date and time in a string, also the name of the folder to save the data in.
         """
         
         for film_id, image_dicts in self.film_image_data.items():
@@ -263,6 +289,9 @@ class scraper():
 
 
     def save_to_file(self):
+        """
+        Saves all of the data in the film_dicts and film_image_data dictionaries
+        """
 
         datetime_str = datetime.datetime.today().strftime('%Y%m%d_%H%M%S')
 
@@ -279,24 +308,49 @@ class scraper():
 
 if __name__ == '__main__':
 
-    num_films = int(input('How many films do you want to scrape? '))
-    num_images = int(input('\nHow many images do you want to scrape? '))
+
+    print('\nWhat do  you want to do?')
+    print('    1: Scrape film information')
+    print('    2: Scrape film images')
+    print('    3: Scrape both information and images')
+    
+
+    while True:
+
+        choice = input('\nPlease choose option 1, 2 or 3, or quit with  q: ')
+        
+        if choice == 'q':
+            exit()
+        
+        elif choice in ['1','2','3']:
+            break
+
+        else:
+            print('\nThat was not an option.')
+            
+    num_films = int(input('\nHow many films do you want to scrape from? '))
+
+    if choice in ['2','3']:
+        num_images = int(input('\nHow many images do you want to scrape? '))
+    else:
+        num_images = 0
+
+    if choice in ['1','3']:
+        get_info = True
+    else:
+        get_info = False
+
+
     imdb_scraper = scraper()
     
     print('\nScraping links')
-
     imdb_scraper.get_film_links(num_films)
 
     print('\nScraping from list:')
-
-    if num_images == 0:
-        imdb_scraper.scrape_from_link_list()
-    else:
-        imdb_scraper.scrape_from_link_list(get_images=True, num_images=num_images)
+    imdb_scraper.scrape_from_link_list(get_info = get_info, num_images=num_images)
 
     print('\nSaving data')
 
     imdb_scraper.save_to_file()
 
 
-    #print(imdb_scraper.film_dicts)
