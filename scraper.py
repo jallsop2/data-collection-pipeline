@@ -163,10 +163,16 @@ class scraper():
         image_list = thumnail_grid.findChildren('a', recursive=False)
 
 
-        for image in image_list:
-            #print(f'        counter')
+        for a_tag in image_list:
 
-            image_src = image.findChildren('img', recursive=False)[0]['src']
+            image = a_tag.find('img')
+
+            if image == None:
+                return page_image_dict
+
+            print(f'        {counter}')
+
+            image_src = image['src']
             image_data = requests.get(image_src).content
             image_name = f'{date_str}_{film_id}_{counter}.jpg'
 
@@ -189,6 +195,8 @@ class scraper():
             link: The links to the page for the current film.
             num_images: The number of images the user want to scrape
         """
+
+        print('        Images:')
         
         image_dict = {}
 
