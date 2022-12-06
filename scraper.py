@@ -202,8 +202,12 @@ class scraper():
         soup = BeautifulSoup(html, 'html.parser')
 
         image_page_span = soup.find('span', {'class':"page_list"})
-        image_page_list = image_page_span.findChildren('a', recursive=False)
-        num_image_pages = len(image_page_list)+1
+
+        if image_page_span == None:
+            num_image_pages = 1
+        else:
+            image_page_list = image_page_span.findChildren('a', recursive=False)
+            num_image_pages = len(image_page_list)+1
 
         num_images_left = num_images
 
