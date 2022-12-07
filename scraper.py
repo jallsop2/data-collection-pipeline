@@ -296,9 +296,10 @@ class scraper():
 
             os.makedirs(f"raw_data/{datetime_str}/{film_id}")
 
-            poster_data = requests.get(film_info['Poster Url']).content
-            with open(f'raw_data/{datetime_str}/{film_id}/poster_{film_id}.jpg', 'wb') as file:
-                file.write(poster_data)
+            if film_info['Poster Url'] != None:
+                poster_data = requests.get(film_info['Poster Url']).content
+                with open(f'raw_data/{datetime_str}/{film_id}/poster_{film_id}.jpg', 'wb') as file:
+                    file.write(poster_data)
         
 
             json_film_info =json.dumps(film_info,indent=4)
