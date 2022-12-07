@@ -1,13 +1,14 @@
 # Data Collection Pipeline
 
-The aim of this project is to implement an industry grade data collection pipelne which can run scalably in the cloud. Using python code to automatically control the browser, extract information from a website and store it on the cloud in a data warehouse and data lake. It shoud conform to industry best pracctices such as being containerised in Docker and running automated tests.
+The aim of this project is to implement an industry grade data collection pipelne which can run scalably in the cloud. Using python code to automatically control the browser, extract information from a website and store it on the cloud. It should conform to industry best practices such as being containerised in Docker and running automated tests.
 
-I decided to use the IMDB website because it has a lot of data with clear uses, and each item has a consistent number of attributes attached to it. Specifically I limited myself to superhero movies in order to have a reasonable amount of data. 
+I decided to use the IMDB website because it has a lot of data with clear uses, and each item has a consistent number of attributes attached to it. Specifically I limited the scope to superhero movies in order to have a reasonable amount of data. 
 
 # Milestone 3
+Beginning the project I decided to scrape the website using the selenium package in python. This programmatically loads the browser, so it can be instructed to do tasks beyond just getting the static html for a webpage, such as clicking to the next page. In particular some webisites have javescript which doesn't run with basic get requests, so selenium might be necessary to access all of the information.
+
 I started to create the data scraper by defining a class in python, then creating methods to do common tasks such as bypassing cookies and moving to the next page, as well as a method to gather the list of links to the pages for specific films that I wanted. I then called these within the initialiser to automatically collect the links for a certain number of webpages.
 
-This was all done using the selenium python package, which programmatically loads the browser, so it can be instructed to do tasks beyond just getting the static html for  a webpage.
 
 ```python
 class scraper():
@@ -245,4 +246,80 @@ class ScraperTestCase(unittest.TestCase):
     def tearDown(self):
         self.test_scraper.driver.quit()
 ```
+
+
+# Milestone 6
+The aim of this milestone is to build a docker image of the program and push to Docker Hub, so that it can be accessed and downloaded from the cloud, and run on any computer or operating system.
+
+This is done by creating a Dockerfile which starts with a basic python image, adds the scraper.py file and installs the required packages.
+
+```dockerfile
+FROM python:3.9
+
+WORKDIR /home
+
+COPY scraper.py .
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
+
+CMD ["python", "./scraper.py"]
+```
+
+This means that the image can then be built and pushed to my Docker Hub repository I created, imdb_scraper_test.
+
+I also created a Docker Volume to contain the data scraped by the program, which can be connected to with the -v tag when running a container. This means that the data in preserved after the container is used, and continues to accessable in the volume.
+
+During this milestone it became clear that selenium was not required to scrape the data I had decided on, since the imdb pages are fairly simple and the urls for similar pages are consistent. Therefore I changed approach and instead got the html with requests.get and parsed it using the beautifulsoup python package. Beautifulsoup allows you to search the html for specific tags and attributes with the .find() method, in order to locate the necessary information.
+
+This change made my code run significantly faster, since getting the html is quicker than loading the whole webpage, and completely avoided problems with trying to scrape or move to the next page before it is fully loaded.
+
+# Milestone 7
+This is the final milestone, with the aim of using github actions to automate the CI/CD pipline for the Docker image. In particular this means setting a github action to build and push a docker image of the scraper automatically whenever a commit is pushed to the repository. This saves time and reduces human error, meaning any changes I make can be quickly reflected in an updated Docker image.
+
+This was done on GitHub which automatically created a workflow containing the ci.yaml file. This file contained the instructions of what to do, using premade github actions to set up QEMU and Docker Buildx, and then to login to Docker and build/push a new image. It also accesses GitHub secrets which contain the login details for Docker.
+
+```yaml
+name: ci
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: jallsop2/imdb_scraper
+
+```
+
+After this I used the pipeline to alter and test more adjustments to my code, restructuring it to be more readable and separating some methods into separate shorter ones. I also changed the program to take user input to decided how many different films and which information from them to scrape.
+
+# Conclusion
+Overall I am happy with the outcome of the project, it does what I set out to do, which is to scrape data from the IMDb website and save it on the cloud. The final version runs fairly quickly and so could be scaleable to scrape large amounts of data instead of the maximum amount of a couple of hundred from I have used it to. Although the selenium package was not neccessary in the end for this project, the techniques were still beneficial to learn, and on a different website could definitely been necessary to access all of the data I wanted. 
+
+Currently the scraper only scrapes the top superhero films, but could be easily be used to scrape other parts of the website. I fact if I contiued to make improvements to the program I would probably give the user more control over which genres and categories to scrape, and implement more features of the IMDb filter into the program.
+
+
+
 
