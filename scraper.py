@@ -127,7 +127,12 @@ class scraper():
         country_section = details_section.find('li',{'data-testid':"title-details-origin"})
         film_info['Country of Origin'] = country_section.find('a').text
 
+
         poster_container = soup.find('div',{'data-testid':"hero-media__poster--inline-video"})
+
+        if poster_container == None:
+            poster_container = soup.find('div',{'data-testid':"hero-media__poster"})
+
         film_info['Poster Url'] = poster_container.find('img',{'class':"ipc-image"})['src']
 
         film_info['Date Scraped'] = str(datetime.date.today())
