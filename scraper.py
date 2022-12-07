@@ -94,7 +94,7 @@ class scraper():
             link = A string containing the link to scrape the information from.
         """
 
-        film_info = {}
+        film_info = {"IMDb Id": None, "Name": None, "Year Released": None, "Age Rating": None, "Length": None, "IMDb Rating": None, "Director": None, "Country of Origin": None, "Poster Url": None, "Date Scraped": None, "IMDb Webpage": None}
 
         headers = {'User-Agent': "Mozilla/5.0"}
         page = requests.get(link, headers=headers)
@@ -111,29 +111,50 @@ class scraper():
         film_name = top_info_container_left.find(name='h1',attrs={'data-testid':"hero-title-block__title"}).text
         film_info['Name'] = film_name
 
-        top_info_list = top_info_container_left.find_all('li',{'class':"ipc-inline-list__item"})
-        film_info['Year Released'] = top_info_list[0].find('a').text
-        film_info['Age Rating'] = top_info_list[1].find('a').text
-        film_info['Length'] = top_info_list[2].text
-
-        top_info_container_right = soup.find('div',{'class':"sc-db8c1937-0 eGmDjE sc-80d4314-3 iBtAhY"})
-        film_info['IMDb Rating'] = top_info_container_right.find('span',{'class':"sc-7ab21ed2-1 jGRxWM"}).text
-
-        secondary_container = soup.find('div',{'class':"sc-7643a8e3-10 itwFpV"})
-        director_info = secondary_container.find('li',{'data-testid':"title-pc-principal-credit"})
-        film_info['Director'] = director_info.find('a').text
         
-        details_section = soup.find('section',{'data-testid':"Details"})
-        country_section = details_section.find('li',{'data-testid':"title-details-origin"})
-        film_info['Country of Origin'] = country_section.find('a').text
+        top_info_list = top_info_container_left.find_all('li',{'class':"ipc-inline-list__item"})
+        try:
+            film_info['Year Released'] = top_info_list[0].find('a').text
+        except:
+            pass
+        try:
+            film_info['Age Rating'] = top_info_list[1].find('a').text
+        except:
+            pass
+        try:
+            film_info['Length'] = top_info_list[2].text
+        except:
+            pass
 
+        try:
+            top_info_container_right = soup.find('div',{'class':"sc-db8c1937-0 eGmDjE sc-80d4314-3 iBtAhY"})
+            film_info['IMDb Rating'] = top_info_container_right.find('span',{'class':"sc-7ab21ed2-1 jGRxWM"}).text
+        except:
+            pass
 
-        poster_container = soup.find('div',{'data-testid':"hero-media__poster--inline-video"})
+        try:
+            secondary_container = soup.find('div',{'class':"sc-7643a8e3-10 itwFpV"})
+            director_info = secondary_container.find('li',{'data-testid':"title-pc-principal-credit"})
+            film_info['Director'] = director_info.find('a').text
+        except:
+            pass
 
-        if poster_container == None:
-            poster_container = soup.find('div',{'data-testid':"hero-media__poster"})
+        try:
+            details_section = soup.find('section',{'data-testid':"Details"})
+            country_section = details_section.find('li',{'data-testid':"title-details-origin"})
+            film_info['Country of Origin'] = country_section.find('a').text
+        except:
+            pass
 
-        film_info['Poster Url'] = poster_container.find('img',{'class':"ipc-image"})['src']
+        try:
+            poster_container = soup.find('div',{'data-testid':"hero-media__poster--inline-video"})
+
+            if poster_container == None:
+                poster_container = soup.find('div',{'data-testid':"hero-media__poster"})
+
+            film_info['Poster Url'] = poster_container.find('img',{'class':"ipc-image"})['src']
+        except:
+            pass
 
         film_info['Date Scraped'] = str(datetime.date.today())
 
